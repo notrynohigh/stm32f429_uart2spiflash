@@ -3,6 +3,8 @@
 "uart_tool\main.o"
 "uart_tool\stm32f4xx_it.o"
 "uart_tool\stm32f4xx_hal_msp.o"
+"uart_tool\stm32f4xx_ll_fmc.o"
+"uart_tool\stm32f4xx_hal_sdram.o"
 "uart_tool\stm32f4xx_hal_spi.o"
 "uart_tool\stm32f4xx_hal_tim.o"
 "uart_tool\stm32f4xx_hal_tim_ex.o"
