@@ -12,6 +12,7 @@ static void proto_get_file(proto_struct2_t proto_struct2)
         pro_file_ack(2);
         return;
     }
+    pfile_info->address += FLS_ROW_ADDRESS;
 	flash_erase_xsector(pfile_info->address, 1);
     flash_write_buf(pfile_info->buf, pfile_info->address, pfile_info->len);
 	pro_file_ack(0);
