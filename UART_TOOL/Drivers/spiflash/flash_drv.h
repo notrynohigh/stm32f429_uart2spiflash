@@ -40,11 +40,19 @@
 #define WIP_FLAG					  0X01		
 #define WEL_FLAG					  0X02     
 #define DUMMY_BYTE				      0XFF	
+#define W25X_Enable4ByteAddr          0xB7
+
+#define W25X_ReadStatusReg1		      0x05 
+#define W25X_ReadStatusReg2		      0x35 
+#define W25X_ReadStatusReg3		       0x15 
 
 /*************************************************/
 #define FlashMID_Winbond		      0xEF      
 
 #define FlashMID      FlashMID_Winbond
+
+#define W25Q256       0XEF18
+#define W25QXX_TYPE   W25Q256
 
 /**
  * @}
@@ -59,6 +67,8 @@
 void flash_read_buf(uint8_t * , uint32_t , uint16_t );
 void flash_write_buf(uint8_t * , uint32_t , uint16_t );
 void flash_erase_xsector(uint32_t addr, uint32_t sector_n);
+void flash_write_buf_plus(uint8_t * pbuf, uint32_t addr, uint16_t len);
+void flash_init(void);
 
 void flash_power_down(void);
 void flash_wakeup(void);

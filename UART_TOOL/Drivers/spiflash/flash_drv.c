@@ -23,7 +23,6 @@ void f_spi_read(uint8_t *pbuf, uint32_t len)
 
 
 /*-------------------------------------------------------------------------------*/
-
 static void flash_write_enable()    
 {
     FLASH_CS_RESET();
@@ -49,12 +48,42 @@ static void flash_wait_write_end()
 }
 
 
+static uint8_t flash_read_sr(uint8_t regno)   
+{  
+	uint8_t byte=0,command=0; 
+    switch(regno)
+    {
+        case 1:
+            command = W25X_ReadStatusReg1;  
+            break;
+        case 2:
+            command = W25X_ReadStatusReg2;   
+            break;
+        case 3:
+            command = W25X_ReadStatusReg3;    
+            break;
+        default:
+            command=W25X_ReadStatusReg1;    
+            break;
+    }    
+	FLASH_CS_RESET();  
+	f_spi_rw_byte(command);             
+	byte=f_spi_rw_byte(0Xff);         
+	FLASH_CS_SET();                          
+	return byte;   
+}
+
+
 static void flash_erase_sector(uint32_t addr)    
 {
     flash_write_enable();
     flash_wait_write_end();
     FLASH_CS_RESET();
     f_spi_rw_byte(W25X_SECTORERASE);
+    if(W25QXX_TYPE == W25Q256)         
+    {
+        f_spi_rw_byte(((addr & 0xFF000000) >> 24));    
+    }       
     f_spi_rw_byte((addr & 0xFF0000) >> 16);
     f_spi_rw_byte((addr & 0xFF00) >> 8);
     f_spi_rw_byte(addr & 0xFF);
@@ -68,6 +97,10 @@ static void flash_write_page(uint8_t * pbuf, uint32_t addr, uint16_t len)
     flash_write_enable();
     FLASH_CS_RESET();
     f_spi_rw_byte(W25X_PAGEPROGRAM);
+    if(W25QXX_TYPE == W25Q256)         
+    {
+        f_spi_rw_byte((uint8_t)((addr & 0xFF000000) >> 24));    
+    }     
     f_spi_rw_byte((addr & 0xFF0000) >> 16);
     f_spi_rw_byte((addr & 0xFF00) >> 8);
     f_spi_rw_byte(addr & 0xFF);
@@ -186,6 +219,10 @@ void flash_read_buf(uint8_t * pbuf, uint32_t addr, uint16_t len)
     FLASH_SELFCHECK();
     FLASH_CS_RESET();
     f_spi_rw_byte(W25X_READDATA);
+    if(W25QXX_TYPE == W25Q256)         
+    {
+        f_spi_rw_byte((uint8_t)((addr & 0xFF000000) >> 24));    
+    }    
     f_spi_rw_byte((addr & 0xFF0000) >> 16);
     f_spi_rw_byte((addr & 0xFF00) >> 8);
     f_spi_rw_byte(addr & 0xFF);
@@ -228,8 +265,82 @@ void flash_erase_chip()
 
 
 
+uint8_t tmp_buf[FLASH_SECTOR_SIZE];	
+void flash_write_buf_plus(uint8_t * pbuf, uint32_t addr, uint16_t len)
+{
+	uint32_t secpos;
+	uint16_t secoff;
+	uint16_t secremain;	   
+ 	uint16_t i;    
+	uint8_t *tmp_p;	  
+   	tmp_p = tmp_buf;	 
+    
+ 	secpos = addr / FLASH_SECTOR_SIZE;
+	secoff = addr % FLASH_SECTOR_SIZE;
+	secremain = FLASH_SECTOR_SIZE - secoff;
 
+ 	if(len <= secremain)
+    {
+        secremain = len;
+    }
+	while(1) 
+	{	
+		flash_read_buf(tmp_p, secpos * FLASH_SECTOR_SIZE, FLASH_SECTOR_SIZE);
+		for(i = 0;i < secremain;i++)
+		{
+			if(tmp_p[secoff + i] != 0XFF) break;  
+		}
+		if(i < secremain)
+		{
+            flash_erase_xsector(secpos * FLASH_SECTOR_SIZE, 1);
+			for(i = 0;i < secremain;i++)
+			{
+				tmp_p[i + secoff] = pbuf[i];	  
+			}
+			flash_write_buf(tmp_p, secpos * FLASH_SECTOR_SIZE, FLASH_SECTOR_SIZE);
 
+		}
+        else
+        {
+            flash_write_buf(pbuf, addr, secremain);
+        }  
+        
+		if(len == secremain)
+            break;
+		else
+		{
+			secpos++;
+			secoff=0;
+
+		   	pbuf += secremain;  
+			addr += secremain;   
+		   	len -= secremain;				
+			if(len > FLASH_SECTOR_SIZE)
+            {
+                secremain = FLASH_SECTOR_SIZE;
+            }	
+			else
+            {
+                secremain = len;
+            }        			
+		}	 
+	}	 
+}
+
+void flash_init()
+{
+    static uint8_t temp;
+    if(W25QXX_TYPE==W25Q256)               
+    {
+        temp = flash_read_sr(3);              
+        if((temp & 0X01) == 0)			      
+		{
+			FLASH_CS_RESET();
+			f_spi_rw_byte(W25X_Enable4ByteAddr); 
+			FLASH_CS_SET();
+		}
+    }
+}
 
 
 

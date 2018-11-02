@@ -35,3 +35,6 @@ uart_tool\main.o: ..\protocol\protocol.h
 uart_tool\main.o: ..\Drivers\uart\uart.h
 uart_tool\main.o: ..\Drivers\spiflash\flash_drv.h
 uart_tool\main.o: ..\platform\platform.h
+uart_tool\main.o: ..\Middlewares\Third_Party\FatFs\src\ff.h
+uart_tool\main.o: ..\Middlewares\Third_Party\FatFs\src\integer.h
+uart_tool\main.o: ..\Middlewares\Third_Party\FatFs\src\ffconf.h

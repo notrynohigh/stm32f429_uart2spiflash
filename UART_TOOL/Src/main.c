@@ -44,6 +44,7 @@
 #include "protocol.h"
 #include "uart.h"
 #include "flash_drv.h"
+#include "ff.h"
 /* USER CODE END Includes */
 
 /* Private variables ---------------------------------------------------------*/
@@ -57,6 +58,7 @@ SDRAM_HandleTypeDef hsdram1;
 /* USER CODE BEGIN PV */
 /* Private variables ---------------------------------------------------------*/
 FMC_SDRAM_CommandTypeDef command;
+FATFS f_fs;
 /* USER CODE END PV */
 
 /* Private function prototypes -----------------------------------------------*/
@@ -110,8 +112,24 @@ int main(void)
   MX_USART1_UART_Init();
   MX_FMC_Init();
   /* USER CODE BEGIN 2 */
+    flash_init();
     SDRAM_Initialization_Sequence(&hsdram1, &command);
 	protocol_init();
+    
+    FRESULT ret;
+    ret = f_mount(&f_fs, "0:", 1);
+    uart_send_buf((uint8_t *)&ret, 1);
+    if(ret == FR_NO_FILESYSTEM)
+    {
+        uart_send_buf((uint8_t *)"hello worxx", 11);
+        ret = f_mkfs("0:", 1, 4096);
+        if(ret == FR_OK)
+        {
+            uart_send_buf((uint8_t *)"hello world", 11);
+        }
+    }
+    uart_send_buf((uint8_t *)"hello ddddd", 11);
+    //f_mount(0, "0:", 0);
   /* USER CODE END 2 */
 
   /* Infinite loop */
