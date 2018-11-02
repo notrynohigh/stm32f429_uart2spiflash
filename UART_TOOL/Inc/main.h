@@ -74,7 +74,7 @@
 
 #define SDRAM_BANK_ADDR                 ((uint32_t)0xC0000000)
 
-#define FLS_ROW_ADDRESS    (18 * 1024 *1024)
+#define FLS_ROW_ADDRESS    (18 * 1024 * 1024)
 
 #define SDRAM_TIMEOUT     ((uint32_t)0xFFFF) 
 

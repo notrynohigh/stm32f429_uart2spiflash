@@ -50,7 +50,8 @@
 
 /* Includes ------------------------------------------------------------------*/
 
-#include <stdio.h>
+/*FatFS is chosen for File storage*/
+#include "ff.h"
 
 /* Private typedef -----------------------------------------------------------*/
 /* Private define ------------------------------------------------------------*/
@@ -64,6 +65,15 @@
 #define JFREE     free
 
 /*This defines the File data manager type.*/
-#undef JFILE
+#define JFILE            FIL
+
+size_t read_file (FIL  *file, uint8_t *buf, uint32_t sizeofbuf);
+size_t write_file (FIL  *file, uint8_t *buf, uint32_t sizeofbuf) ;
+
+#define JFREAD(file,buf,sizeofbuf)  \
+read_file (file,buf,sizeofbuf)
+
+#define JFWRITE(file,buf,sizeofbuf)  \
+write_file (file,buf,sizeofbuf)
 
 /************************ (C) COPYRIGHT STMicroelectronics *****END OF FILE****/

@@ -136,7 +136,7 @@
 /   950 - Traditional Chinese (DBCS)
 */
 
-#define _USE_LFN     0    /* 0 to 3 */
+#define _USE_LFN     1    /* 0 to 3 */
 #define _MAX_LFN     255  /* Maximum LFN length to handle (12 to 255) */
 /* The _USE_LFN switches the support of long file name (LFN).
 /
@@ -241,10 +241,10 @@
 /  When enable exFAT, also LFN needs to be enabled. (_USE_LFN >= 1)
 /  Note that enabling exFAT discards C89 compatibility. */
 
-#define _FS_NORTC	0
-#define _NORTC_MON	6
-#define _NORTC_MDAY	4
-#define _NORTC_YEAR	2015
+#define _FS_NORTC	1
+#define _NORTC_MON	11
+#define _NORTC_MDAY	2
+#define _NORTC_YEAR	2018
 /* The option _FS_NORTC switches timestamp functiton. If the system does not have
 /  any RTC function or valid timestamp is not needed, set _FS_NORTC = 1 to disable
 /  the timestamp function. All objects modified by FatFs will have a fixed timestamp
@@ -254,7 +254,7 @@
 /  _NORTC_MDAY and _NORTC_YEAR have no effect. 
 /  These options have no effect at read-only configuration (_FS_READONLY = 1). */
 
-#define _FS_LOCK    2     /* 0:Disable or >=1:Enable */
+#define _FS_LOCK   2      /* 0:Disable or >=1:Enable */
 /* The option _FS_LOCK switches file lock function to control duplicated file open
 /  and illegal operation to open objects. This option must be 0 when _FS_READONLY
 /  is 1.

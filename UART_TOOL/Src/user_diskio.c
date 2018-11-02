@@ -204,14 +204,15 @@ DRESULT USER_write (
 { 
   /* USER CODE BEGIN WRITE */
   /* USER CODE HERE */
-    uint32_t i = 0;
+    
     switch(pdrv)
     {
         case FLS:
             for( ; count > 0; count--)
             {
                 flash_write_buf_plus((uint8_t *)buff, sector * FLS_SECTOR_SIZE, FLS_SECTOR_SIZE);
-#if 0                
+#if 0          
+                uint32_t i = 0;                
                 flash_read_buf(test, sector * FLS_SECTOR_SIZE, FLS_SECTOR_SIZE);
                 for(i = 0;i < FLS_SECTOR_SIZE;i++)
                 {
