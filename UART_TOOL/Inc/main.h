@@ -74,6 +74,11 @@
 
 #define SDRAM_BANK_ADDR                 ((uint32_t)0xC0000000)
 
+#define SDRAM_HEAP_BASE                 SDRAM_BANK_ADDR
+#define SDRAM_HEAP_SIZE                 (1024 * 1024)
+
+#define SDRAM_USER_BASE                 (SDRAM_HEAP_BASE + SDRAM_HEAP_SIZE)
+
 #define FLS_ROW_ADDRESS    (18 * 1024 * 1024)
 
 #define SDRAM_TIMEOUT     ((uint32_t)0xFFFF) 

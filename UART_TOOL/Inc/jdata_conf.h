@@ -52,7 +52,7 @@
 
 /*FatFS is chosen for File storage*/
 #include "ff.h"
-
+#include "platform.h"
 /* Private typedef -----------------------------------------------------------*/
 /* Private define ------------------------------------------------------------*/
 /* Private macro -------------------------------------------------------------*/
@@ -61,8 +61,8 @@
 /* Private functions ---------------------------------------------------------*/
 
 /*This defines the memory allocation methods.*/
-#define JMALLOC   malloc
-#define JFREE     free
+#define JMALLOC   pvPortMalloc          //malloc
+#define JFREE     vPortFree             //free
 
 /*This defines the File data manager type.*/
 #define JFILE            FIL

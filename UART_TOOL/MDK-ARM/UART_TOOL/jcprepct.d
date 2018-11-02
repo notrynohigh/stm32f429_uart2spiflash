@@ -37,8 +37,9 @@ uart_tool\jcprepct.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pwr.h
 uart_tool\jcprepct.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pwr_ex.h
 uart_tool\jcprepct.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_spi.h
 uart_tool\jcprepct.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_uart.h
-uart_tool\jcprepct.o: d:\Keil_v5\ARM\ARMCC\Bin\..\include\stdlib.h
+uart_tool\jcprepct.o: ..\platform\platform.h
 uart_tool\jcprepct.o: d:\Keil_v5\ARM\ARMCC\Bin\..\include\stddef.h
+uart_tool\jcprepct.o: d:\Keil_v5\ARM\ARMCC\Bin\..\include\stdlib.h
 uart_tool\jcprepct.o: d:\Keil_v5\ARM\ARMCC\Bin\..\include\string.h
 uart_tool\jcprepct.o: ../Middlewares/Third_Party/LibJPEG/include/jpeglib.h
 uart_tool\jcprepct.o: ../Inc/jmorecfg.h

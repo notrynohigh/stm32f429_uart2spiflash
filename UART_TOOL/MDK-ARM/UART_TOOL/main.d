@@ -35,7 +35,7 @@ uart_tool\main.o: ../Inc/fatfs.h
 uart_tool\main.o: ../Middlewares/Third_Party/FatFs/src/ff.h
 uart_tool\main.o: ../Middlewares/Third_Party/FatFs/src/integer.h
 uart_tool\main.o: ../Inc/ffconf.h
-uart_tool\main.o: d:\Keil_v5\ARM\ARMCC\Bin\..\include\stdlib.h
+uart_tool\main.o: ..\platform\platform.h
 uart_tool\main.o: ../Middlewares/Third_Party/FatFs/src/ff_gen_drv.h
 uart_tool\main.o: ../Middlewares/Third_Party/FatFs/src/diskio.h
 uart_tool\main.o: ../Inc/user_diskio.h
@@ -47,4 +47,3 @@ uart_tool\main.o: ../Inc/jmorecfg.h
 uart_tool\main.o: ..\protocol\protocol.h
 uart_tool\main.o: ..\Drivers\uart\uart.h
 uart_tool\main.o: ..\Drivers\spiflash\flash_drv.h
-uart_tool\main.o: ..\platform\platform.h

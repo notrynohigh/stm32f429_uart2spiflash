@@ -30,6 +30,7 @@
 "uart_tool\crc16.o"
 "uart_tool\b_tp_port.o"
 "uart_tool\protocol.o"
+"uart_tool\heap_4.o"
 "uart_tool\uart.o"
 "uart_tool\flash_drv.o"
 "uart_tool\syscall.o"

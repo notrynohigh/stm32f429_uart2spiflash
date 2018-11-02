@@ -287,9 +287,19 @@
 
 /* define the ff_malloc ff_free macros as standard malloc free */
 #if !defined(ff_malloc) && !defined(ff_free)
+
+#if 0
 #include <stdlib.h>
 #define ff_malloc  malloc
 #define ff_free  free
+#else
+#include "platform.h"
+
+#define ff_malloc  pvPortMalloc
+#define ff_free  vPortFree
+
+#endif
+
 #endif
 
 #endif /* _FFCONF */

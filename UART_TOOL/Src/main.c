@@ -87,8 +87,8 @@ static void SDRAM_Initialization_Sequence(SDRAM_HandleTypeDef *hsdram, FMC_SDRAM
 
 /* USER CODE BEGIN 0 */
 
-uint8_t in_img_tmp[480 * 360] __attribute__ ((at(SDRAM_BANK_ADDR))); 
-uint8_t out_img_tmp[172800] __attribute__ ((at(SDRAM_BANK_ADDR + 172800))); 
+uint8_t in_img_tmp[480 * 360] __attribute__ ((at(SDRAM_USER_BASE))); 
+uint8_t out_img_tmp[172800] __attribute__ ((at(SDRAM_USER_BASE + 172800))); 
 unsigned long out_img_size;
 
 GLOBAL(void)
@@ -278,9 +278,9 @@ int main(void)
         flash_read_buf(&in_img_tmp[i * 4096], FLS_ROW_ADDRESS + i * 4096, 172800 % 4096);
         HAL_Delay(500);
     }
-    #endif
-    //write_JPEG_file("/1.jpeg", 60);
     
+    //write_JPEG_file("/1.jpeg", 60);
+    #endif
     printf("open file 1.jpeg\n\r");
     FIL t_outfile;
     uint8_t jpeg_table[64];

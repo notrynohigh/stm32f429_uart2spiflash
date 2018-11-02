@@ -38,5 +38,5 @@ uart_tool\libjpeg.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pwr.h
 uart_tool\libjpeg.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pwr_ex.h
 uart_tool\libjpeg.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_spi.h
 uart_tool\libjpeg.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_uart.h
-uart_tool\libjpeg.o: d:\Keil_v5\ARM\ARMCC\Bin\..\include\stdlib.h
+uart_tool\libjpeg.o: ..\platform\platform.h
 uart_tool\libjpeg.o: ../Inc/jmorecfg.h
