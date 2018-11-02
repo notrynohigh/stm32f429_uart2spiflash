@@ -86,6 +86,7 @@ static void SDRAM_Initialization_Sequence(SDRAM_HandleTypeDef *hsdram, FMC_SDRAM
 
 /* USER CODE BEGIN 0 */
 uint8_t fs_tmp[4096];// __attribute__ ((at(SDRAM_BANK_ADDR)));
+uint8_t test_tmp[4096] __attribute__ ((at(SDRAM_BANK_ADDR))); 
 /* USER CODE END 0 */
 
 /**
@@ -141,6 +142,13 @@ int main(void)
     }
     uart_send_buf((uint8_t *)"hello ddddd", 11);
     f_mount(0, "0:", 0);
+    
+    uint32_t i = 0;
+    for(i = 0;i < 4096;i++)
+    {
+        test_tmp[i] = i;
+    }
+    uart_send_buf(test_tmp, 4096);
   /* USER CODE END 2 */
 
   /* Infinite loop */
@@ -237,14 +245,14 @@ static void MX_SPI5_Init(void)
   hspi5.Init.Mode = SPI_MODE_MASTER;
   hspi5.Init.Direction = SPI_DIRECTION_2LINES;
   hspi5.Init.DataSize = SPI_DATASIZE_8BIT;
-  hspi5.Init.CLKPolarity = SPI_POLARITY_HIGH;
-  hspi5.Init.CLKPhase = SPI_PHASE_2EDGE;
+  hspi5.Init.CLKPolarity = SPI_POLARITY_LOW;
+  hspi5.Init.CLKPhase = SPI_PHASE_1EDGE;
   hspi5.Init.NSS = SPI_NSS_SOFT;
   hspi5.Init.BaudRatePrescaler = SPI_BAUDRATEPRESCALER_2;
   hspi5.Init.FirstBit = SPI_FIRSTBIT_MSB;
   hspi5.Init.TIMode = SPI_TIMODE_DISABLE;
   hspi5.Init.CRCCalculation = SPI_CRCCALCULATION_DISABLE;
-  hspi5.Init.CRCPolynomial = 7;
+  hspi5.Init.CRCPolynomial = 10;
   if (HAL_SPI_Init(&hspi5) != HAL_OK)
   {
     _Error_Handler(__FILE__, __LINE__);

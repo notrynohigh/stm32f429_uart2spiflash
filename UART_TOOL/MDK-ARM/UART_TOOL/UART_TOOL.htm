@@ -3,7 +3,7 @@
 <title>Static Call Graph - [UART_TOOL\UART_TOOL.axf]</title></head>
 <body><HR>
 <H1>Static Call Graph for image UART_TOOL\UART_TOOL.axf</H1><HR>
-<BR><P>#&#060CALLGRAPH&#062# ARM Linker, 5060750: Last Updated: Fri Nov 02 11:29:21 2018
+<BR><P>#&#060CALLGRAPH&#062# ARM Linker, 5060750: Last Updated: Fri Nov 02 11:47:18 2018
 <BR><P>
 <H3>Maximum Stack Usage =       4824 bytes + Unknown(Cycles, Untraceable Function Pointers)</H3><H3>
 Call chain for Maximum Stack Depth:</H3>
@@ -1078,7 +1078,6 @@ Global Symbols
 <BR><BR>[Stack]<UL><LI>Max Depth = 128<LI>Call Chain = f_mkfs &rArr; get_ldnumber
 </UL>
 <BR>[Calls]<UL><LI><a href="#[d9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;get_fattime
-<LI><a href="#[d8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;st_dword
 <LI><a href="#[d5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mem_set
 <LI><a href="#[d6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mem_cpy
 <LI><a href="#[d2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;get_ldnumber
@@ -1086,6 +1085,7 @@ Global Symbols
 <LI><a href="#[d4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;disk_ioctl
 <LI><a href="#[d3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;disk_initialize
 <LI><a href="#[d7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;st_word
+<LI><a href="#[d8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;st_dword
 </UL>
 <BR>[Called By]<UL><LI><a href="#[64]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
 </UL>
@@ -1184,7 +1184,7 @@ Global Symbols
 <BR><BR>[Called By]<UL><LI><a href="#[d1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;f_mkfs
 </UL>
 
-<P><STRONG><a name="[64]"></a>main</STRONG> (Thumb, 212 bytes, Stack size 16 bytes, main.o(i.main))
+<P><STRONG><a name="[64]"></a>main</STRONG> (Thumb, 232 bytes, Stack size 16 bytes, main.o(i.main))
 <BR><BR>[Stack]<UL><LI>Max Depth = 184<LI>Call Chain = main &rArr; SystemClock_Config &rArr; HAL_RCC_ClockConfig &rArr; HAL_RCC_GetSysClockFreq &rArr; __aeabi_uldivmod
 </UL>
 <BR>[Calls]<UL><LI><a href="#[c6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;uart_send_buf
@@ -1285,7 +1285,7 @@ Local Symbols
 <BR>[Called By]<UL><LI><a href="#[64]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
 </UL>
 
-<P><STRONG><a name="[b4]"></a>MX_SPI5_Init</STRONG> (Thumb, 56 bytes, Stack size 8 bytes, main.o(i.MX_SPI5_Init))
+<P><STRONG><a name="[b4]"></a>MX_SPI5_Init</STRONG> (Thumb, 54 bytes, Stack size 8 bytes, main.o(i.MX_SPI5_Init))
 <BR><BR>[Stack]<UL><LI>Max Depth = 96<LI>Call Chain = MX_SPI5_Init &rArr; HAL_SPI_Init &rArr; HAL_SPI_MspInit &rArr; HAL_GPIO_Init
 </UL>
 <BR>[Calls]<UL><LI><a href="#[95]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_SPI_Init
