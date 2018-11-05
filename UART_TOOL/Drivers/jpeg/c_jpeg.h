@@ -7,7 +7,7 @@
 
 
 
-#define I_IMG_QUALITY   (60)
+#define I_IMG_QUALITY   (40)
 
 
 
