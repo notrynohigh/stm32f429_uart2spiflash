@@ -50,9 +50,9 @@
 
 /* Includes ------------------------------------------------------------------*/
 
-/*FatFS is chosen for File storage*/
-#include "ff.h"
+#include <stdio.h>
 #include "platform.h"
+
 /* Private typedef -----------------------------------------------------------*/
 /* Private define ------------------------------------------------------------*/
 /* Private macro -------------------------------------------------------------*/
@@ -61,19 +61,10 @@
 /* Private functions ---------------------------------------------------------*/
 
 /*This defines the memory allocation methods.*/
-#define JMALLOC   pvPortMalloc          //malloc
-#define JFREE     vPortFree             //free
+#define JMALLOC   pvPortMalloc         //malloc
+#define JFREE     vPortFree            //free
 
 /*This defines the File data manager type.*/
-#define JFILE            FIL
-
-size_t read_file (FIL  *file, uint8_t *buf, uint32_t sizeofbuf);
-size_t write_file (FIL  *file, uint8_t *buf, uint32_t sizeofbuf) ;
-
-#define JFREAD(file,buf,sizeofbuf)  \
-read_file (file,buf,sizeofbuf)
-
-#define JFWRITE(file,buf,sizeofbuf)  \
-write_file (file,buf,sizeofbuf)
+#undef JFILE
 
 /************************ (C) COPYRIGHT STMicroelectronics *****END OF FILE****/

@@ -1,10 +1,7 @@
 --cpu=Cortex-M4.fp
 "uart_tool\startup_stm32f429xx.o"
 "uart_tool\main.o"
-"uart_tool\user_diskio.o"
-"uart_tool\fatfs.o"
 "uart_tool\libjpeg.o"
-"uart_tool\jdata_conf.o"
 "uart_tool\stm32f4xx_it.o"
 "uart_tool\stm32f4xx_hal_msp.o"
 "uart_tool\stm32f4xx_ll_fmc.o"
@@ -33,11 +30,6 @@
 "uart_tool\heap_4.o"
 "uart_tool\uart.o"
 "uart_tool\flash_drv.o"
-"uart_tool\syscall.o"
-"uart_tool\cc936.o"
-"uart_tool\diskio_1.o"
-"uart_tool\ff_1.o"
-"uart_tool\ff_gen_drv.o"
 "uart_tool\jcapimin.o"
 "uart_tool\jcapistd.o"
 "uart_tool\jdapimin.o"
@@ -84,6 +76,7 @@
 "uart_tool\jmemmgr.o"
 "uart_tool\jutils.o"
 "uart_tool\jmemnobs.o"
+"uart_tool\c_jpeg.o"
 --library_type=microlib --strict --scatter "UART_TOOL\UART_TOOL.sct"
 --summary_stderr --info summarysizes --map --load_addr_map_info --xref --callgraph --symbols
 --info sizes --info totals --info unused --info veneers

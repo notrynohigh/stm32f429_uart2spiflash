@@ -37,5 +37,6 @@ uart_tool\user_diskio.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pwr.h
 uart_tool\user_diskio.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pwr_ex.h
 uart_tool\user_diskio.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_spi.h
 uart_tool\user_diskio.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_uart.h
-uart_tool\user_diskio.o: ..\platform\platform.h
+uart_tool\user_diskio.o: d:\Keil_v5\ARM\ARMCC\Bin\..\include\stdlib.h
 uart_tool\user_diskio.o: ..\Drivers\spiflash\flash_drv.h
+uart_tool\user_diskio.o: ..\platform\platform.h
