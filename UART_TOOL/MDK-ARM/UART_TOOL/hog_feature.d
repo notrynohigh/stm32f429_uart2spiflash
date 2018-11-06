@@ -1,0 +1,12 @@
+uart_tool\hog_feature.o: ..\face\HOG_feature.c
+uart_tool\hog_feature.o: ..\face\HOG_feature.h
+uart_tool\hog_feature.o: d:\Keil_v5\ARM\ARMCC\Bin\..\include\stdio.h
+uart_tool\hog_feature.o: ..\face\arm_math.h
+uart_tool\hog_feature.o: ../Drivers/CMSIS/Include/core_cm4.h
+uart_tool\hog_feature.o: d:\Keil_v5\ARM\ARMCC\Bin\..\include\stdint.h
+uart_tool\hog_feature.o: ../Drivers/CMSIS/Include/core_cmInstr.h
+uart_tool\hog_feature.o: ../Drivers/CMSIS/Include/cmsis_armcc.h
+uart_tool\hog_feature.o: ../Drivers/CMSIS/Include/core_cmFunc.h
+uart_tool\hog_feature.o: ../Drivers/CMSIS/Include/core_cmSimd.h
+uart_tool\hog_feature.o: d:\Keil_v5\ARM\ARMCC\Bin\..\include\string.h
+uart_tool\hog_feature.o: d:\Keil_v5\ARM\ARMCC\Bin\..\include\math.h

@@ -30,6 +30,7 @@
 "uart_tool\heap_4.o"
 "uart_tool\uart.o"
 "uart_tool\flash_drv.o"
+"uart_tool\flash_manage.o"
 "uart_tool\jcapimin.o"
 "uart_tool\jcapistd.o"
 "uart_tool\jdapimin.o"
@@ -77,6 +78,11 @@
 "uart_tool\jutils.o"
 "uart_tool\jmemnobs.o"
 "uart_tool\c_jpeg.o"
+"uart_tool\arm_dot_prod_q15.o"
+"uart_tool\face_detection.o"
+"uart_tool\hog_feature.o"
+"uart_tool\svm.o"
+"uart_tool\algo_interface.o"
 --library_type=microlib --strict --scatter "UART_TOOL\UART_TOOL.sct"
 --summary_stderr --info summarysizes --map --load_addr_map_info --xref --callgraph --symbols
 --info sizes --info totals --info unused --info veneers

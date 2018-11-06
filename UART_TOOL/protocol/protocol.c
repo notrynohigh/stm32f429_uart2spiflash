@@ -3,6 +3,7 @@
 #include "uart.h"
 #include "string.h"
 #include "flash_drv.h"
+#include "mem_map.h"
 
 static void proto_get_file(proto_struct2_t proto_struct2)
 {
@@ -12,7 +13,7 @@ static void proto_get_file(proto_struct2_t proto_struct2)
         pro_file_ack(2);
         return;
     }
-    pfile_info->address += FLS_ROW_ADDRESS;
+    pfile_info->address += FLS_I_IMG_ADDRESS;
 	flash_erase_xsector(pfile_info->address, 1);
     flash_write_buf(pfile_info->buf, pfile_info->address, pfile_info->len);
 	pro_file_ack(0);
@@ -26,7 +27,7 @@ static void proto_get_algo_param(proto_struct2_t proto_struct2)
         pro_algo_p_ack(2);
         return;
     }
-    pfile_info->address += FLS_ALGO_ADDRESS;
+    pfile_info->address += FLS_SVS_ADDRESS;
 	flash_erase_xsector(pfile_info->address, 1);
     flash_write_buf(pfile_info->buf, pfile_info->address, pfile_info->len);
 	pro_algo_p_ack(0);

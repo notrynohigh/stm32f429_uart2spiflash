@@ -38,3 +38,4 @@ uart_tool\protocol.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_uart.h
 uart_tool\protocol.o: d:\Keil_v5\ARM\ARMCC\Bin\..\include\string.h
 uart_tool\protocol.o: ..\Drivers\spiflash\flash_drv.h
 uart_tool\protocol.o: ..\platform\platform.h
+uart_tool\protocol.o: ..\platform\mem_map.h

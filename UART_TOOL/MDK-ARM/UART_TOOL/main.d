@@ -36,6 +36,7 @@ uart_tool\main.o: ../Middlewares/Third_Party/LibJPEG/include/jpeglib.h
 uart_tool\main.o: ../Inc/jconfig.h
 uart_tool\main.o: ../Inc/jdata_conf.h
 uart_tool\main.o: ..\platform\platform.h
+uart_tool\main.o: ..\platform\mem_map.h
 uart_tool\main.o: ../Inc/jmorecfg.h
 uart_tool\main.o: ..\protocol\protocol.h
 uart_tool\main.o: ..\Drivers\uart\uart.h

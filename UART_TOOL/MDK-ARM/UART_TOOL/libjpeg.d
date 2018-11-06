@@ -36,4 +36,5 @@ uart_tool\libjpeg.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pwr.h
 uart_tool\libjpeg.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pwr_ex.h
 uart_tool\libjpeg.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_spi.h
 uart_tool\libjpeg.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_uart.h
+uart_tool\libjpeg.o: ..\platform\mem_map.h
 uart_tool\libjpeg.o: ../Inc/jmorecfg.h

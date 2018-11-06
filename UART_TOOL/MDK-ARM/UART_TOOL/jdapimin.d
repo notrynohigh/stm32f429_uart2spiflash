@@ -35,6 +35,7 @@ uart_tool\jdapimin.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pwr.h
 uart_tool\jdapimin.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pwr_ex.h
 uart_tool\jdapimin.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_spi.h
 uart_tool\jdapimin.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_uart.h
+uart_tool\jdapimin.o: ..\platform\mem_map.h
 uart_tool\jdapimin.o: d:\Keil_v5\ARM\ARMCC\Bin\..\include\stddef.h
 uart_tool\jdapimin.o: d:\Keil_v5\ARM\ARMCC\Bin\..\include\stdlib.h
 uart_tool\jdapimin.o: d:\Keil_v5\ARM\ARMCC\Bin\..\include\string.h

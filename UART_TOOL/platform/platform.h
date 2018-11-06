@@ -2,9 +2,11 @@
 #define __PLATFORM_H__
 
 
+
+
 #include "stm32f4xx_hal.h"
-
-
+#include "mem_map.h"
+#include "stdio.h"
 
 #define F_CS_PORT			GPIOF
 #define F_CS_PIN			GPIO_PIN_6
@@ -43,6 +45,14 @@ void vPortFree( void *pv );
 
 
 /**----------------------------------------------------------------------for heap_4 end-------*/
+
+#define DEBUG_ENABLE          1
+
+#if DEBUG_ENABLE
+#define b_log(...)   printf(__VA_ARGS__)
+#else
+#define b_log(...)
+#endif
 
 
 

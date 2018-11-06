@@ -69,7 +69,7 @@
   \ingroup Cortex_M4
   @{
  */
-
+#define __FPU_PRESENT  1U
 /*  CMSIS CM4 definitions */
 #define __CM4_CMSIS_VERSION_MAIN  (0x04U)                                      /*!< [31:16] CMSIS HAL main version */
 #define __CM4_CMSIS_VERSION_SUB   (0x1EU)                                      /*!< [15:0]  CMSIS HAL sub version */

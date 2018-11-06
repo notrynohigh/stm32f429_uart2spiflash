@@ -1,0 +1,13 @@
+uart_tool\svm.o: ..\face\SVM.c
+uart_tool\svm.o: ..\face\SVM.h
+uart_tool\svm.o: d:\Keil_v5\ARM\ARMCC\Bin\..\include\stdio.h
+uart_tool\svm.o: d:\Keil_v5\ARM\ARMCC\Bin\..\include\math.h
+uart_tool\svm.o: ..\face\arm_math.h
+uart_tool\svm.o: ../Drivers/CMSIS/Include/core_cm4.h
+uart_tool\svm.o: d:\Keil_v5\ARM\ARMCC\Bin\..\include\stdint.h
+uart_tool\svm.o: ../Drivers/CMSIS/Include/core_cmInstr.h
+uart_tool\svm.o: ../Drivers/CMSIS/Include/cmsis_armcc.h
+uart_tool\svm.o: ../Drivers/CMSIS/Include/core_cmFunc.h
+uart_tool\svm.o: ../Drivers/CMSIS/Include/core_cmSimd.h
+uart_tool\svm.o: d:\Keil_v5\ARM\ARMCC\Bin\..\include\string.h
+uart_tool\svm.o: ..\face\HOG_feature.h

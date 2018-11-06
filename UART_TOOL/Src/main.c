@@ -56,6 +56,7 @@
 #include "uart.h"
 #include "flash_drv.h"
 #include "c_jpeg.h"
+#include "mem_map.h"
 /* USER CODE END Includes */
 
 /* Private variables ---------------------------------------------------------*/
@@ -87,11 +88,7 @@ static void SDRAM_Initialization_Sequence(SDRAM_HandleTypeDef *hsdram, FMC_SDRAM
 
 /* USER CODE BEGIN 0 */
 
-#define I_IMG_WIDTH     (480)
-#define I_IMG_HEIGHT    (360)
-#define I_IMG_SIZE      (I_IMG_WIDTH * I_IMG_HEIGHT)
-uint8_t in_img_tmp[I_IMG_SIZE] __attribute__ ((at(SDRAM_USER_BASE))); 
-uint8_t out_img_tmp[I_IMG_SIZE] __attribute__ ((at(SDRAM_USER_BASE + I_IMG_SIZE))); 
+uint8_t out_img_tmp[I_IMG_SIZE] __attribute__ ((at(SDRAM_O_IMG_ADDRESS))); 
 unsigned long out_img_size = I_IMG_SIZE;
 
 /* USER CODE END 0 */
@@ -134,23 +131,7 @@ int main(void)
     flash_init();
     SDRAM_Initialization_Sequence(&hsdram1, &command);
 	protocol_init();
-    
-    #if 1
-    /**  load img from spiflash  */
-    uint32_t i = 0;
-    for(i = 0;i < (I_IMG_SIZE / 4096);i++)
-    {
-        flash_read_buf(&in_img_tmp[i * 4096], FLS_ROW_ADDRESS + i * 4096, 4096);
-    }
-    if(I_IMG_SIZE % 4096)
-    {
-        flash_read_buf(&in_img_tmp[i * 4096], FLS_ROW_ADDRESS + i * 4096, I_IMG_SIZE % 4096);
-    }
-    out_img_size = c_jpeg_grayscale(in_img_tmp, out_img_tmp, out_img_size, I_IMG_WIDTH, I_IMG_HEIGHT);
-    printf("out_img_size: %ld\n\r", out_img_size);
-    uart_send_buf(out_img_tmp, out_img_size);
-    
-    #endif
+
   /* USER CODE END 2 */
 
   /* Infinite loop */
