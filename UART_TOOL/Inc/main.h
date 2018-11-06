@@ -81,6 +81,10 @@
 
 #define FLS_ROW_ADDRESS    (18 * 1024 * 1024)
 
+#define FLS_ALGO_ADDRESS   0
+
+
+
 #define SDRAM_TIMEOUT     ((uint32_t)0xFFFF) 
 
 #define SDRAM_MODEREG_BURST_LENGTH_1             ((uint16_t)0x0000)

@@ -5,6 +5,7 @@
 
 
 #define CMD_SEND_FILE       0X1
+#define CMD_SEND_ALGO_P     0X2
 #define CMD_CHECK_FILE      0X51
 
 
@@ -44,7 +45,7 @@ typedef struct
 void protocol_init(void);
 
 void pro_file_ack(uint8_t ack);
-
+void pro_algo_p_ack(uint8_t ack);
 
 #endif
 

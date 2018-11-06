@@ -3,11 +3,11 @@
 <title>Static Call Graph - [UART_TOOL\UART_TOOL.axf]</title></head>
 <body><HR>
 <H1>Static Call Graph for image UART_TOOL\UART_TOOL.axf</H1><HR>
-<BR><P>#&#060CALLGRAPH&#062# ARM Linker, 5060750: Last Updated: Mon Nov 05 11:41:41 2018
+<BR><P>#&#060CALLGRAPH&#062# ARM Linker, 5060750: Last Updated: Tue Nov 06 09:56:33 2018
 <BR><P>
-<H3>Maximum Stack Usage =       4824 bytes + Unknown(Cycles, Untraceable Function Pointers)</H3><H3>
+<H3>Maximum Stack Usage =       4832 bytes + Unknown(Cycles, Untraceable Function Pointers)</H3><H3>
 Call chain for Maximum Stack Depth:</H3>
-protocol_cb &rArr; pro_file_ack &rArr; protocol_send &rArr; b_tp_send_data &rArr; _b_tp_unpack_send &rArr; b_tp_port_send &rArr; uart_send_buf &rArr; HAL_UART_Transmit &rArr; UART_WaitOnFlagUntilTimeout
+protocol_cb &rArr; dispatch_cmd &rArr; pro_file_ack &rArr; protocol_send &rArr; b_tp_send_data &rArr; _b_tp_unpack_send &rArr; b_tp_port_send &rArr; uart_send_buf &rArr; HAL_UART_Transmit &rArr; UART_WaitOnFlagUntilTimeout
 <P>
 <H3>
 Mutually Recursive functions
@@ -247,7 +247,7 @@ Global Symbols
 <P><STRONG><a name="[66]"></a>__main</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, entry.o(.ARM.Collect$$$$00000000))
 <BR>[Address Reference Count : 1]<UL><LI> startup_stm32f429xx.o(.text)
 </UL>
-<P><STRONG><a name="[1ad]"></a>_main_stk</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, entry2.o(.ARM.Collect$$$$00000001))
+<P><STRONG><a name="[1af]"></a>_main_stk</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, entry2.o(.ARM.Collect$$$$00000001))
 
 <P><STRONG><a name="[d9]"></a>_main_scatterload</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, entry5.o(.ARM.Collect$$$$00000004))
 <BR><BR>[Calls]<UL><LI><a href="#[da]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__scatterload
@@ -257,15 +257,15 @@ Global Symbols
 <BR><BR>[Called By]<UL><LI><a href="#[da]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__scatterload
 </UL>
 
-<P><STRONG><a name="[1ae]"></a>_main_clock</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, entry7b.o(.ARM.Collect$$$$00000008))
+<P><STRONG><a name="[1b0]"></a>_main_clock</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, entry7b.o(.ARM.Collect$$$$00000008))
 
-<P><STRONG><a name="[1af]"></a>_main_cpp_init</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, entry8b.o(.ARM.Collect$$$$0000000A))
+<P><STRONG><a name="[1b1]"></a>_main_cpp_init</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, entry8b.o(.ARM.Collect$$$$0000000A))
 
-<P><STRONG><a name="[1b0]"></a>_main_init</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, entry9a.o(.ARM.Collect$$$$0000000B))
+<P><STRONG><a name="[1b2]"></a>_main_init</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, entry9a.o(.ARM.Collect$$$$0000000B))
 
-<P><STRONG><a name="[1b1]"></a>__rt_final_cpp</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, entry10a.o(.ARM.Collect$$$$0000000D))
+<P><STRONG><a name="[1b3]"></a>__rt_final_cpp</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, entry10a.o(.ARM.Collect$$$$0000000D))
 
-<P><STRONG><a name="[1b2]"></a>__rt_final_exit</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, entry11a.o(.ARM.Collect$$$$0000000F))
+<P><STRONG><a name="[1b4]"></a>__rt_final_exit</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, entry11a.o(.ARM.Collect$$$$0000000F))
 
 <P><STRONG><a name="[0]"></a>Reset_Handler</STRONG> (Thumb, 8 bytes, Stack size 0 bytes, startup_stm32f429xx.o(.text))
 <BR>[Address Reference Count : 1]<UL><LI> startup_stm32f429xx.o(RESET)
@@ -544,37 +544,37 @@ Global Symbols
 <BR>[Calls]<UL><LI><a href="#[dc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_llsr
 <LI><a href="#[dd]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_llsl
 </UL>
-<BR>[Called By]<UL><LI><a href="#[fe]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_RCC_GetSysClockFreq
-<LI><a href="#[130]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_printf_core
+<BR>[Called By]<UL><LI><a href="#[130]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_printf_core
+<LI><a href="#[fe]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_RCC_GetSysClockFreq
 </UL>
 
 <P><STRONG><a name="[135]"></a>__aeabi_memcpy</STRONG> (Thumb, 36 bytes, Stack size 0 bytes, memcpya.o(.text))
-<BR><BR>[Called By]<UL><LI><a href="#[1a8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;protocol_send
+<BR><BR>[Called By]<UL><LI><a href="#[1aa]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;protocol_send
 <LI><a href="#[147]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;b_tp_send_data
 <LI><a href="#[134]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_b_tp_unpack_send
-<LI><a href="#[172]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;jcopy_sample_rows
+<LI><a href="#[177]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;jcopy_sample_rows
 <LI><a href="#[13b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;add_huff_table
 <LI><a href="#[9c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;empty_mem_output_buffer
 </UL>
 
 <P><STRONG><a name="[155]"></a>__aeabi_memcpy4</STRONG> (Thumb, 0 bytes, Stack size 0 bytes, memcpya.o(.text))
 <BR><BR>[Called By]<UL><LI><a href="#[154]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;create_context_buffer
-<LI><a href="#[187]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;jinit_c_master_control
-<LI><a href="#[176]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;jpeg_gen_optimal_table
+<LI><a href="#[18a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;jinit_c_master_control
+<LI><a href="#[17b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;jpeg_gen_optimal_table
 <LI><a href="#[d1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;finish_pass_huff
 <LI><a href="#[d7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;encode_mcu_huff
 </UL>
 
-<P><STRONG><a name="[1b3]"></a>__aeabi_memcpy8</STRONG> (Thumb, 0 bytes, Stack size 0 bytes, memcpya.o(.text), UNUSED)
+<P><STRONG><a name="[1b5]"></a>__aeabi_memcpy8</STRONG> (Thumb, 0 bytes, Stack size 0 bytes, memcpya.o(.text), UNUSED)
 
 <P><STRONG><a name="[df]"></a>__aeabi_memset</STRONG> (Thumb, 14 bytes, Stack size 0 bytes, memseta.o(.text))
 <BR><BR>[Called By]<UL><LI><a href="#[e0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_memset$wrapper
 <LI><a href="#[de]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_memclr
 </UL>
 
-<P><STRONG><a name="[1b4]"></a>__aeabi_memset4</STRONG> (Thumb, 0 bytes, Stack size 0 bytes, memseta.o(.text), UNUSED)
+<P><STRONG><a name="[1b6]"></a>__aeabi_memset4</STRONG> (Thumb, 0 bytes, Stack size 0 bytes, memseta.o(.text), UNUSED)
 
-<P><STRONG><a name="[1b5]"></a>__aeabi_memset8</STRONG> (Thumb, 0 bytes, Stack size 0 bytes, memseta.o(.text), UNUSED)
+<P><STRONG><a name="[1b7]"></a>__aeabi_memset8</STRONG> (Thumb, 0 bytes, Stack size 0 bytes, memseta.o(.text), UNUSED)
 
 <P><STRONG><a name="[de]"></a>__aeabi_memclr</STRONG> (Thumb, 4 bytes, Stack size 0 bytes, memseta.o(.text))
 <BR><BR>[Calls]<UL><LI><a href="#[df]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_memset
@@ -582,12 +582,12 @@ Global Symbols
 <BR>[Called By]<UL><LI><a href="#[aa]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;compress_first_pass
 <LI><a href="#[a9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;compress_data
 <LI><a href="#[6d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;start_pass
-<LI><a href="#[165]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;emit_restart
+<LI><a href="#[16a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;emit_restart
 <LI><a href="#[97]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;access_virt_sarray
 <LI><a href="#[98]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;access_virt_barray
 </UL>
 
-<P><STRONG><a name="[195]"></a>__aeabi_memclr4</STRONG> (Thumb, 0 bytes, Stack size 0 bytes, memseta.o(.text))
+<P><STRONG><a name="[198]"></a>__aeabi_memclr4</STRONG> (Thumb, 0 bytes, Stack size 0 bytes, memseta.o(.text))
 <BR><BR>[Called By]<UL><LI><a href="#[14b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;jpeg_CreateCompress
 <LI><a href="#[bf]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;jpeg_fdct_8x4
 <LI><a href="#[b2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;jpeg_fdct_7x7
@@ -611,11 +611,11 @@ Global Symbols
 <LI><a href="#[bd]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;jpeg_fdct_12x6
 <LI><a href="#[be]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;jpeg_fdct_10x5
 <LI><a href="#[88]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;start_pass_huff
-<LI><a href="#[19d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;jpeg_make_c_derived_tbl
-<LI><a href="#[176]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;jpeg_gen_optimal_table
+<LI><a href="#[1a0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;jpeg_make_c_derived_tbl
+<LI><a href="#[17b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;jpeg_gen_optimal_table
 </UL>
 
-<P><STRONG><a name="[1b6]"></a>__aeabi_memclr8</STRONG> (Thumb, 0 bytes, Stack size 0 bytes, memseta.o(.text), UNUSED)
+<P><STRONG><a name="[1b8]"></a>__aeabi_memclr8</STRONG> (Thumb, 0 bytes, Stack size 0 bytes, memseta.o(.text), UNUSED)
 
 <P><STRONG><a name="[e0]"></a>_memset$wrapper</STRONG> (Thumb, 18 bytes, Stack size 8 bytes, memseta.o(.text), UNUSED)
 <BR><BR>[Calls]<UL><LI><a href="#[df]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_memset
@@ -654,32 +654,32 @@ Global Symbols
 </UL>
 
 <P><STRONG><a name="[dd]"></a>__aeabi_llsl</STRONG> (Thumb, 30 bytes, Stack size 0 bytes, llshl.o(.text))
-<BR><BR>[Called By]<UL><LI><a href="#[db]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_uldivmod
-<LI><a href="#[e2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_double_epilogue
+<BR><BR>[Called By]<UL><LI><a href="#[e2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_double_epilogue
+<LI><a href="#[db]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_uldivmod
 </UL>
 
-<P><STRONG><a name="[1b7]"></a>_ll_shift_l</STRONG> (Thumb, 0 bytes, Stack size 0 bytes, llshl.o(.text), UNUSED)
+<P><STRONG><a name="[1b9]"></a>_ll_shift_l</STRONG> (Thumb, 0 bytes, Stack size 0 bytes, llshl.o(.text), UNUSED)
 
 <P><STRONG><a name="[dc]"></a>__aeabi_llsr</STRONG> (Thumb, 32 bytes, Stack size 0 bytes, llushr.o(.text))
-<BR><BR>[Called By]<UL><LI><a href="#[db]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_uldivmod
-<LI><a href="#[e2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_double_epilogue
+<BR><BR>[Called By]<UL><LI><a href="#[e2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_double_epilogue
+<LI><a href="#[db]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_uldivmod
 </UL>
 
-<P><STRONG><a name="[1b8]"></a>_ll_ushift_r</STRONG> (Thumb, 0 bytes, Stack size 0 bytes, llushr.o(.text), UNUSED)
+<P><STRONG><a name="[1ba]"></a>_ll_ushift_r</STRONG> (Thumb, 0 bytes, Stack size 0 bytes, llushr.o(.text), UNUSED)
 
-<P><STRONG><a name="[1b9]"></a>__I$use$fp</STRONG> (Thumb, 0 bytes, Stack size 0 bytes, iusefp.o(.text), UNUSED)
+<P><STRONG><a name="[1bb]"></a>__I$use$fp</STRONG> (Thumb, 0 bytes, Stack size 0 bytes, iusefp.o(.text), UNUSED)
 
 <P><STRONG><a name="[e7]"></a>_float_round</STRONG> (Thumb, 18 bytes, Stack size 0 bytes, fepilogue.o(.text))
 <BR><BR>[Called By]<UL><LI><a href="#[e6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_d2f
 </UL>
 
-<P><STRONG><a name="[1ba]"></a>_float_epilogue</STRONG> (Thumb, 92 bytes, Stack size 4 bytes, fepilogue.o(.text), UNUSED)
+<P><STRONG><a name="[1bc]"></a>_float_epilogue</STRONG> (Thumb, 92 bytes, Stack size 4 bytes, fepilogue.o(.text), UNUSED)
 
 <P><STRONG><a name="[e4]"></a>_double_round</STRONG> (Thumb, 30 bytes, Stack size 8 bytes, depilogue.o(.text))
 <BR><BR>[Stack]<UL><LI>Max Depth = 8<LI>Call Chain = _double_round
 </UL>
-<BR>[Called By]<UL><LI><a href="#[e3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_ddiv
-<LI><a href="#[e2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_double_epilogue
+<BR>[Called By]<UL><LI><a href="#[e2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_double_epilogue
+<LI><a href="#[e3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_ddiv
 </UL>
 
 <P><STRONG><a name="[e2]"></a>_double_epilogue</STRONG> (Thumb, 156 bytes, Stack size 32 bytes, depilogue.o(.text))
@@ -699,7 +699,7 @@ Global Symbols
 <BR>[Called By]<UL><LI><a href="#[d9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_main_scatterload
 </UL>
 
-<P><STRONG><a name="[1bb]"></a>__scatterload_rt2</STRONG> (Thumb, 0 bytes, Stack size 0 bytes, init.o(.text), UNUSED)
+<P><STRONG><a name="[1bd]"></a>__scatterload_rt2</STRONG> (Thumb, 0 bytes, Stack size 0 bytes, init.o(.text), UNUSED)
 
 <P><STRONG><a name="[4]"></a>BusFault_Handler</STRONG> (Thumb, 2 bytes, Stack size 0 bytes, stm32f4xx_it.o(i.BusFault_Handler))
 <BR><BR>[Calls]<UL><LI><a href="#[4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BusFault_Handler
@@ -784,7 +784,7 @@ Global Symbols
 <BR>[Calls]<UL><LI><a href="#[eb]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_GetTick
 </UL>
 <BR>[Called By]<UL><LI><a href="#[125]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SDRAM_Initialization_Sequence
-<LI><a href="#[179]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;flash_wait_write_end
+<LI><a href="#[17d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;flash_wait_write_end
 </UL>
 
 <P><STRONG><a name="[f4]"></a>HAL_GPIO_Init</STRONG> (Thumb, 408 bytes, Stack size 40 bytes, stm32f4xx_hal_gpio.o(i.HAL_GPIO_Init))
@@ -797,13 +797,13 @@ Global Symbols
 </UL>
 
 <P><STRONG><a name="[123]"></a>HAL_GPIO_WritePin</STRONG> (Thumb, 10 bytes, Stack size 0 bytes, stm32f4xx_hal_gpio.o(i.HAL_GPIO_WritePin))
-<BR><BR>[Called By]<UL><LI><a href="#[17b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;flash_read_buf
-<LI><a href="#[17a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;flash_init
+<BR><BR>[Called By]<UL><LI><a href="#[17f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;flash_read_buf
+<LI><a href="#[17e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;flash_init
 <LI><a href="#[122]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MX_GPIO_Init
-<LI><a href="#[17d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;flash_write_page
-<LI><a href="#[178]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;flash_write_enable
-<LI><a href="#[179]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;flash_wait_write_end
-<LI><a href="#[177]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;flash_erase_xsector
+<LI><a href="#[180]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;flash_write_page
+<LI><a href="#[17c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;flash_write_enable
+<LI><a href="#[17d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;flash_wait_write_end
+<LI><a href="#[157]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;flash_erase_xsector
 </UL>
 
 <P><STRONG><a name="[eb]"></a>HAL_GetTick</STRONG> (Thumb, 6 bytes, Stack size 0 bytes, stm32f4xx_hal.o(i.HAL_GetTick))
@@ -979,7 +979,7 @@ Global Symbols
 <BR>[Calls]<UL><LI><a href="#[eb]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_GetTick
 <LI><a href="#[10a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_SPI_TransmitReceive
 </UL>
-<BR>[Called By]<UL><LI><a href="#[173]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;f_spi_read
+<BR>[Called By]<UL><LI><a href="#[178]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;f_spi_read
 </UL>
 
 <P><STRONG><a name="[10b]"></a>HAL_SPI_Transmit</STRONG> (Thumb, 360 bytes, Stack size 40 bytes, stm32f4xx_hal_spi.o(i.HAL_SPI_Transmit))
@@ -989,7 +989,7 @@ Global Symbols
 <LI><a href="#[10c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SPI_WaitFlagStateUntilTimeout
 <LI><a href="#[10d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SPI_CheckFlag_BSY
 </UL>
-<BR>[Called By]<UL><LI><a href="#[175]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;f_spi_write
+<BR>[Called By]<UL><LI><a href="#[17a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;f_spi_write
 </UL>
 
 <P><STRONG><a name="[10a]"></a>HAL_SPI_TransmitReceive</STRONG> (Thumb, 472 bytes, Stack size 40 bytes, stm32f4xx_hal_spi.o(i.HAL_SPI_TransmitReceive))
@@ -1000,7 +1000,7 @@ Global Symbols
 <LI><a href="#[10d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SPI_CheckFlag_BSY
 </UL>
 <BR>[Called By]<UL><LI><a href="#[109]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_SPI_Receive
-<LI><a href="#[174]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;f_spi_rw_byte
+<LI><a href="#[179]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;f_spi_rw_byte
 </UL>
 
 <P><STRONG><a name="[129]"></a>HAL_SYSTICK_CLKSourceConfig</STRONG> (Thumb, 24 bytes, Stack size 0 bytes, stm32f4xx_hal_cortex.o(i.HAL_SYSTICK_CLKSourceConfig))
@@ -1084,7 +1084,7 @@ Global Symbols
 <BR>[Calls]<UL><LI><a href="#[f0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_DMA_Start_IT
 </UL>
 <BR>[Called By]<UL><LI><a href="#[12e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;uart1_idle_cb
-<LI><a href="#[1a4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;uart_rec_start
+<LI><a href="#[1a7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;uart_rec_start
 </UL>
 
 <P><STRONG><a name="[12a]"></a>HAL_UART_RxCpltCallback</STRONG> (Thumb, 2 bytes, Stack size 0 bytes, stm32f4xx_hal_uart.o(i.HAL_UART_RxCpltCallback))
@@ -1117,7 +1117,7 @@ Global Symbols
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> startup_stm32f429xx.o(RESET)
 </UL>
-<P><STRONG><a name="[1a1]"></a>MX_LIBJPEG_Init</STRONG> (Thumb, 2 bytes, Stack size 0 bytes, libjpeg.o(i.MX_LIBJPEG_Init))
+<P><STRONG><a name="[1a4]"></a>MX_LIBJPEG_Init</STRONG> (Thumb, 2 bytes, Stack size 0 bytes, libjpeg.o(i.MX_LIBJPEG_Init))
 <BR><BR>[Called By]<UL><LI><a href="#[64]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
 </UL>
 
@@ -1188,9 +1188,9 @@ Global Symbols
 <BR><BR>[Calls]<UL><LI><a href="#[130]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_printf_core
 </UL>
 
-<P><STRONG><a name="[1bc]"></a>__1printf$8</STRONG> (Thumb, 0 bytes, Stack size 24 bytes, printf8.o(i.__0printf$8), UNUSED)
+<P><STRONG><a name="[1be]"></a>__1printf$8</STRONG> (Thumb, 0 bytes, Stack size 24 bytes, printf8.o(i.__0printf$8), UNUSED)
 
-<P><STRONG><a name="[1a3]"></a>__2printf</STRONG> (Thumb, 0 bytes, Stack size 24 bytes, printf8.o(i.__0printf$8))
+<P><STRONG><a name="[1a6]"></a>__2printf</STRONG> (Thumb, 0 bytes, Stack size 24 bytes, printf8.o(i.__0printf$8))
 <BR><BR>[Stack]<UL><LI>Max Depth = 24<LI>Call Chain = __2printf
 </UL>
 <BR>[Called By]<UL><LI><a href="#[64]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
@@ -1201,19 +1201,19 @@ Global Symbols
 <LI><a href="#[130]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_printf_core
 </UL>
 
-<P><STRONG><a name="[1bd]"></a>__1sprintf$8</STRONG> (Thumb, 0 bytes, Stack size 24 bytes, printf8.o(i.__0sprintf$8), UNUSED)
+<P><STRONG><a name="[1bf]"></a>__1sprintf$8</STRONG> (Thumb, 0 bytes, Stack size 24 bytes, printf8.o(i.__0sprintf$8), UNUSED)
 
-<P><STRONG><a name="[17e]"></a>__2sprintf</STRONG> (Thumb, 0 bytes, Stack size 24 bytes, printf8.o(i.__0sprintf$8))
+<P><STRONG><a name="[181]"></a>__2sprintf</STRONG> (Thumb, 0 bytes, Stack size 24 bytes, printf8.o(i.__0sprintf$8))
 <BR><BR>[Stack]<UL><LI>Max Depth = 24<LI>Call Chain = __2sprintf
 </UL>
 <BR>[Called By]<UL><LI><a href="#[a1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;format_message
 </UL>
 
-<P><STRONG><a name="[1be]"></a>__scatterload_copy</STRONG> (Thumb, 14 bytes, Stack size unknown bytes, handlers.o(i.__scatterload_copy), UNUSED)
+<P><STRONG><a name="[1c0]"></a>__scatterload_copy</STRONG> (Thumb, 14 bytes, Stack size unknown bytes, handlers.o(i.__scatterload_copy), UNUSED)
 
-<P><STRONG><a name="[1bf]"></a>__scatterload_null</STRONG> (Thumb, 2 bytes, Stack size unknown bytes, handlers.o(i.__scatterload_null), UNUSED)
+<P><STRONG><a name="[1c1]"></a>__scatterload_null</STRONG> (Thumb, 2 bytes, Stack size unknown bytes, handlers.o(i.__scatterload_null), UNUSED)
 
-<P><STRONG><a name="[1c0]"></a>__scatterload_zeroinit</STRONG> (Thumb, 14 bytes, Stack size unknown bytes, handlers.o(i.__scatterload_zeroinit), UNUSED)
+<P><STRONG><a name="[1c2]"></a>__scatterload_zeroinit</STRONG> (Thumb, 14 bytes, Stack size unknown bytes, handlers.o(i.__scatterload_zeroinit), UNUSED)
 
 <P><STRONG><a name="[144]"></a>_b_tp_rec_check_head</STRONG> (Thumb, 4 bytes, Stack size 0 bytes, b_tp.o(i._b_tp_rec_check_head))
 <BR><BR>[Called By]<UL><LI><a href="#[143]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;b_tp_receive_data
@@ -1244,7 +1244,7 @@ Global Symbols
 <P><STRONG><a name="[146]"></a>b_tp_reg_callback</STRONG> (Thumb, 14 bytes, Stack size 0 bytes, b_tp.o(i.b_tp_reg_callback))
 <BR><BR>[Calls]<UL><LI><a href="#[145]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_b_tp_reset_rec_info
 </UL>
-<BR>[Called By]<UL><LI><a href="#[1a2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;protocol_init
+<BR>[Called By]<UL><LI><a href="#[1a5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;protocol_init
 </UL>
 
 <P><STRONG><a name="[147]"></a>b_tp_send_data</STRONG> (Thumb, 96 bytes, Stack size 272 bytes, b_tp.o(i.b_tp_send_data))
@@ -1255,7 +1255,7 @@ Global Symbols
 <LI><a href="#[134]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_b_tp_unpack_send
 <LI><a href="#[135]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_memcpy
 </UL>
-<BR>[Called By]<UL><LI><a href="#[1a8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;protocol_send
+<BR>[Called By]<UL><LI><a href="#[1aa]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;protocol_send
 </UL>
 
 <P><STRONG><a name="[149]"></a>c_jpeg_grayscale</STRONG> (Thumb, 128 bytes, Stack size 608 bytes, c_jpeg.o(i.c_jpeg_grayscale))
@@ -1281,71 +1281,71 @@ Global Symbols
 <LI><a href="#[132]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_b_tp_check_data
 </UL>
 
-<P><STRONG><a name="[173]"></a>f_spi_read</STRONG> (Thumb, 14 bytes, Stack size 0 bytes, flash_drv.o(i.f_spi_read))
+<P><STRONG><a name="[178]"></a>f_spi_read</STRONG> (Thumb, 14 bytes, Stack size 0 bytes, flash_drv.o(i.f_spi_read))
 <BR><BR>[Stack]<UL><LI>Max Depth = 120<LI>Call Chain = f_spi_read &rArr; HAL_SPI_Receive &rArr; HAL_SPI_TransmitReceive &rArr; SPI_CheckFlag_BSY &rArr; SPI_WaitFlagStateUntilTimeout
 </UL>
 <BR>[Calls]<UL><LI><a href="#[109]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_SPI_Receive
 </UL>
-<BR>[Called By]<UL><LI><a href="#[17b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;flash_read_buf
+<BR>[Called By]<UL><LI><a href="#[17f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;flash_read_buf
 </UL>
 
-<P><STRONG><a name="[174]"></a>f_spi_rw_byte</STRONG> (Thumb, 28 bytes, Stack size 16 bytes, flash_drv.o(i.f_spi_rw_byte))
+<P><STRONG><a name="[179]"></a>f_spi_rw_byte</STRONG> (Thumb, 28 bytes, Stack size 16 bytes, flash_drv.o(i.f_spi_rw_byte))
 <BR><BR>[Stack]<UL><LI>Max Depth = 96<LI>Call Chain = f_spi_rw_byte &rArr; HAL_SPI_TransmitReceive &rArr; SPI_CheckFlag_BSY &rArr; SPI_WaitFlagStateUntilTimeout
 </UL>
 <BR>[Calls]<UL><LI><a href="#[10a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_SPI_TransmitReceive
 </UL>
-<BR>[Called By]<UL><LI><a href="#[17b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;flash_read_buf
-<LI><a href="#[17a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;flash_init
-<LI><a href="#[17d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;flash_write_page
-<LI><a href="#[178]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;flash_write_enable
-<LI><a href="#[179]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;flash_wait_write_end
-<LI><a href="#[177]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;flash_erase_xsector
+<BR>[Called By]<UL><LI><a href="#[17f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;flash_read_buf
+<LI><a href="#[17e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;flash_init
+<LI><a href="#[180]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;flash_write_page
+<LI><a href="#[17c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;flash_write_enable
+<LI><a href="#[17d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;flash_wait_write_end
+<LI><a href="#[157]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;flash_erase_xsector
 </UL>
 
-<P><STRONG><a name="[175]"></a>f_spi_write</STRONG> (Thumb, 14 bytes, Stack size 0 bytes, flash_drv.o(i.f_spi_write))
+<P><STRONG><a name="[17a]"></a>f_spi_write</STRONG> (Thumb, 14 bytes, Stack size 0 bytes, flash_drv.o(i.f_spi_write))
 <BR><BR>[Stack]<UL><LI>Max Depth = 80<LI>Call Chain = f_spi_write &rArr; HAL_SPI_Transmit &rArr; SPI_CheckFlag_BSY &rArr; SPI_WaitFlagStateUntilTimeout
 </UL>
 <BR>[Calls]<UL><LI><a href="#[10b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_SPI_Transmit
 </UL>
-<BR>[Called By]<UL><LI><a href="#[17d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;flash_write_page
+<BR>[Called By]<UL><LI><a href="#[180]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;flash_write_page
 </UL>
 
-<P><STRONG><a name="[177]"></a>flash_erase_xsector</STRONG> (Thumb, 104 bytes, Stack size 24 bytes, flash_drv.o(i.flash_erase_xsector))
+<P><STRONG><a name="[157]"></a>flash_erase_xsector</STRONG> (Thumb, 104 bytes, Stack size 24 bytes, flash_drv.o(i.flash_erase_xsector))
 <BR><BR>[Stack]<UL><LI>Max Depth = 144<LI>Call Chain = flash_erase_xsector &rArr; flash_wait_write_end &rArr; f_spi_rw_byte &rArr; HAL_SPI_TransmitReceive &rArr; SPI_CheckFlag_BSY &rArr; SPI_WaitFlagStateUntilTimeout
 </UL>
 <BR>[Calls]<UL><LI><a href="#[123]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_GPIO_WritePin
-<LI><a href="#[174]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;f_spi_rw_byte
-<LI><a href="#[178]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;flash_write_enable
-<LI><a href="#[179]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;flash_wait_write_end
+<LI><a href="#[179]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;f_spi_rw_byte
+<LI><a href="#[17c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;flash_write_enable
+<LI><a href="#[17d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;flash_wait_write_end
 </UL>
-<BR>[Called By]<UL><LI><a href="#[a3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;protocol_cb
+<BR>[Called By]<UL><LI><a href="#[156]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;dispatch_cmd
 </UL>
 
-<P><STRONG><a name="[17a]"></a>flash_init</STRONG> (Thumb, 80 bytes, Stack size 16 bytes, flash_drv.o(i.flash_init))
+<P><STRONG><a name="[17e]"></a>flash_init</STRONG> (Thumb, 80 bytes, Stack size 16 bytes, flash_drv.o(i.flash_init))
 <BR><BR>[Stack]<UL><LI>Max Depth = 112<LI>Call Chain = flash_init &rArr; f_spi_rw_byte &rArr; HAL_SPI_TransmitReceive &rArr; SPI_CheckFlag_BSY &rArr; SPI_WaitFlagStateUntilTimeout
 </UL>
 <BR>[Calls]<UL><LI><a href="#[123]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_GPIO_WritePin
-<LI><a href="#[174]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;f_spi_rw_byte
+<LI><a href="#[179]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;f_spi_rw_byte
 </UL>
 <BR>[Called By]<UL><LI><a href="#[64]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
 </UL>
 
-<P><STRONG><a name="[17b]"></a>flash_read_buf</STRONG> (Thumb, 90 bytes, Stack size 24 bytes, flash_drv.o(i.flash_read_buf))
+<P><STRONG><a name="[17f]"></a>flash_read_buf</STRONG> (Thumb, 90 bytes, Stack size 24 bytes, flash_drv.o(i.flash_read_buf))
 <BR><BR>[Stack]<UL><LI>Max Depth = 144<LI>Call Chain = flash_read_buf &rArr; f_spi_read &rArr; HAL_SPI_Receive &rArr; HAL_SPI_TransmitReceive &rArr; SPI_CheckFlag_BSY &rArr; SPI_WaitFlagStateUntilTimeout
 </UL>
 <BR>[Calls]<UL><LI><a href="#[123]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_GPIO_WritePin
-<LI><a href="#[174]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;f_spi_rw_byte
-<LI><a href="#[173]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;f_spi_read
+<LI><a href="#[179]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;f_spi_rw_byte
+<LI><a href="#[178]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;f_spi_read
 </UL>
 <BR>[Called By]<UL><LI><a href="#[64]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
 </UL>
 
-<P><STRONG><a name="[17c]"></a>flash_write_buf</STRONG> (Thumb, 128 bytes, Stack size 32 bytes, flash_drv.o(i.flash_write_buf))
+<P><STRONG><a name="[158]"></a>flash_write_buf</STRONG> (Thumb, 128 bytes, Stack size 32 bytes, flash_drv.o(i.flash_write_buf))
 <BR><BR>[Stack]<UL><LI>Max Depth = 176<LI>Call Chain = flash_write_buf &rArr; flash_write_page &rArr; flash_wait_write_end &rArr; f_spi_rw_byte &rArr; HAL_SPI_TransmitReceive &rArr; SPI_CheckFlag_BSY &rArr; SPI_WaitFlagStateUntilTimeout
 </UL>
-<BR>[Calls]<UL><LI><a href="#[17d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;flash_write_page
+<BR>[Calls]<UL><LI><a href="#[180]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;flash_write_page
 </UL>
-<BR>[Called By]<UL><LI><a href="#[a3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;protocol_cb
+<BR>[Called By]<UL><LI><a href="#[156]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;dispatch_cmd
 </UL>
 
 <P><STRONG><a name="[6b]"></a>fputc</STRONG> (Thumb, 26 bytes, Stack size 16 bytes, uart.o(i.fputc))
@@ -1355,118 +1355,118 @@ Global Symbols
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> printf8.o(i.__0printf$8)
 </UL>
-<P><STRONG><a name="[16d]"></a>free</STRONG> (Thumb, 76 bytes, Stack size 8 bytes, malloc.o(i.free))
+<P><STRONG><a name="[172]"></a>free</STRONG> (Thumb, 76 bytes, Stack size 8 bytes, malloc.o(i.free))
 <BR><BR>[Stack]<UL><LI>Max Depth = 8<LI>Call Chain = free
 </UL>
 <BR>[Called By]<UL><LI><a href="#[9c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;empty_mem_output_buffer
 </UL>
 
-<P><STRONG><a name="[172]"></a>jcopy_sample_rows</STRONG> (Thumb, 38 bytes, Stack size 24 bytes, jutils.o(i.jcopy_sample_rows))
+<P><STRONG><a name="[177]"></a>jcopy_sample_rows</STRONG> (Thumb, 38 bytes, Stack size 24 bytes, jutils.o(i.jcopy_sample_rows))
 <BR><BR>[Stack]<UL><LI>Max Depth = 24<LI>Call Chain = jcopy_sample_rows
 </UL>
 <BR>[Calls]<UL><LI><a href="#[135]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_memcpy
 </UL>
 <BR>[Called By]<UL><LI><a href="#[82]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;fullsize_downsample
 <LI><a href="#[75]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;pre_process_context
-<LI><a href="#[171]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;expand_bottom_edge
+<LI><a href="#[176]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;expand_bottom_edge
 </UL>
 
-<P><STRONG><a name="[184]"></a>jdiv_round_up</STRONG> (Thumb, 10 bytes, Stack size 0 bytes, jutils.o(i.jdiv_round_up))
-<BR><BR>[Called By]<UL><LI><a href="#[183]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;jpeg_calc_jpeg_dimensions
-<LI><a href="#[1a5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;per_scan_setup
-<LI><a href="#[182]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;initial_setup
+<P><STRONG><a name="[187]"></a>jdiv_round_up</STRONG> (Thumb, 10 bytes, Stack size 0 bytes, jutils.o(i.jdiv_round_up))
+<BR><BR>[Called By]<UL><LI><a href="#[186]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;jpeg_calc_jpeg_dimensions
+<LI><a href="#[1a8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;per_scan_setup
+<LI><a href="#[185]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;initial_setup
 </UL>
 
-<P><STRONG><a name="[18e]"></a>jinit_arith_encoder</STRONG> (Thumb, 56 bytes, Stack size 8 bytes, jcarith.o(i.jinit_arith_encoder))
+<P><STRONG><a name="[191]"></a>jinit_arith_encoder</STRONG> (Thumb, 56 bytes, Stack size 8 bytes, jcarith.o(i.jinit_arith_encoder))
 <BR><BR>[Stack]<UL><LI>Max Depth = 8<LI>Call Chain = jinit_arith_encoder
 </UL>
-<BR>[Called By]<UL><LI><a href="#[18a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;jinit_compress_master
+<BR>[Called By]<UL><LI><a href="#[18d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;jinit_compress_master
 </UL>
 
-<P><STRONG><a name="[185]"></a>jinit_c_coef_controller</STRONG> (Thumb, 138 bytes, Stack size 32 bytes, jccoefct.o(i.jinit_c_coef_controller))
+<P><STRONG><a name="[188]"></a>jinit_c_coef_controller</STRONG> (Thumb, 138 bytes, Stack size 32 bytes, jccoefct.o(i.jinit_c_coef_controller))
 <BR><BR>[Stack]<UL><LI>Max Depth = 32<LI>Call Chain = jinit_c_coef_controller
 </UL>
-<BR>[Calls]<UL><LI><a href="#[186]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;jround_up
+<BR>[Calls]<UL><LI><a href="#[189]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;jround_up
 </UL>
-<BR>[Called By]<UL><LI><a href="#[18a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;jinit_compress_master
+<BR>[Called By]<UL><LI><a href="#[18d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;jinit_compress_master
 </UL>
 
-<P><STRONG><a name="[190]"></a>jinit_c_main_controller</STRONG> (Thumb, 108 bytes, Stack size 24 bytes, jcmainct.o(i.jinit_c_main_controller))
+<P><STRONG><a name="[193]"></a>jinit_c_main_controller</STRONG> (Thumb, 108 bytes, Stack size 24 bytes, jcmainct.o(i.jinit_c_main_controller))
 <BR><BR>[Stack]<UL><LI>Max Depth = 24<LI>Call Chain = jinit_c_main_controller
 </UL>
-<BR>[Called By]<UL><LI><a href="#[18a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;jinit_compress_master
+<BR>[Called By]<UL><LI><a href="#[18d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;jinit_compress_master
 </UL>
 
-<P><STRONG><a name="[187]"></a>jinit_c_master_control</STRONG> (Thumb, 248 bytes, Stack size 40 bytes, jcmaster.o(i.jinit_c_master_control))
+<P><STRONG><a name="[18a]"></a>jinit_c_master_control</STRONG> (Thumb, 248 bytes, Stack size 40 bytes, jcmaster.o(i.jinit_c_master_control))
 <BR><BR>[Stack]<UL><LI>Max Depth = 2720<LI>Call Chain = jinit_c_master_control &rArr; validate_script
 </UL>
-<BR>[Calls]<UL><LI><a href="#[188]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;validate_script
-<LI><a href="#[182]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;initial_setup
+<BR>[Calls]<UL><LI><a href="#[18b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;validate_script
+<LI><a href="#[185]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;initial_setup
 <LI><a href="#[155]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_memcpy4
 </UL>
-<BR>[Called By]<UL><LI><a href="#[18a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;jinit_compress_master
+<BR>[Called By]<UL><LI><a href="#[18d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;jinit_compress_master
 </UL>
 
-<P><STRONG><a name="[189]"></a>jinit_c_prep_controller</STRONG> (Thumb, 132 bytes, Stack size 24 bytes, jcprepct.o(i.jinit_c_prep_controller))
+<P><STRONG><a name="[18c]"></a>jinit_c_prep_controller</STRONG> (Thumb, 132 bytes, Stack size 24 bytes, jcprepct.o(i.jinit_c_prep_controller))
 <BR><BR>[Stack]<UL><LI>Max Depth = 64<LI>Call Chain = jinit_c_prep_controller &rArr; create_context_buffer
 </UL>
 <BR>[Calls]<UL><LI><a href="#[154]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;create_context_buffer
 </UL>
-<BR>[Called By]<UL><LI><a href="#[18a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;jinit_compress_master
+<BR>[Called By]<UL><LI><a href="#[18d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;jinit_compress_master
 </UL>
 
-<P><STRONG><a name="[18b]"></a>jinit_color_converter</STRONG> (Thumb, 346 bytes, Stack size 24 bytes, jccolor.o(i.jinit_color_converter))
+<P><STRONG><a name="[18e]"></a>jinit_color_converter</STRONG> (Thumb, 346 bytes, Stack size 24 bytes, jccolor.o(i.jinit_color_converter))
 <BR><BR>[Stack]<UL><LI>Max Depth = 24<LI>Call Chain = jinit_color_converter
 </UL>
-<BR>[Called By]<UL><LI><a href="#[18a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;jinit_compress_master
+<BR>[Called By]<UL><LI><a href="#[18d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;jinit_compress_master
 </UL>
 
-<P><STRONG><a name="[18a]"></a>jinit_compress_master</STRONG> (Thumb, 124 bytes, Stack size 8 bytes, jcinit.o(i.jinit_compress_master))
+<P><STRONG><a name="[18d]"></a>jinit_compress_master</STRONG> (Thumb, 124 bytes, Stack size 8 bytes, jcinit.o(i.jinit_compress_master))
 <BR><BR>[Stack]<UL><LI>Max Depth = 2728<LI>Call Chain = jinit_compress_master &rArr; jinit_c_master_control &rArr; validate_script
 </UL>
-<BR>[Calls]<UL><LI><a href="#[191]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;jinit_marker_writer
-<LI><a href="#[18d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;jinit_forward_dct
-<LI><a href="#[18c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;jinit_downsampler
-<LI><a href="#[18b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;jinit_color_converter
-<LI><a href="#[189]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;jinit_c_prep_controller
-<LI><a href="#[190]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;jinit_c_main_controller
-<LI><a href="#[185]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;jinit_c_coef_controller
-<LI><a href="#[18f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;jinit_huff_encoder
-<LI><a href="#[187]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;jinit_c_master_control
-<LI><a href="#[18e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;jinit_arith_encoder
+<BR>[Calls]<UL><LI><a href="#[194]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;jinit_marker_writer
+<LI><a href="#[190]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;jinit_forward_dct
+<LI><a href="#[18f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;jinit_downsampler
+<LI><a href="#[18e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;jinit_color_converter
+<LI><a href="#[18c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;jinit_c_prep_controller
+<LI><a href="#[193]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;jinit_c_main_controller
+<LI><a href="#[188]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;jinit_c_coef_controller
+<LI><a href="#[192]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;jinit_huff_encoder
+<LI><a href="#[18a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;jinit_c_master_control
+<LI><a href="#[191]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;jinit_arith_encoder
 </UL>
 <BR>[Called By]<UL><LI><a href="#[14f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;jpeg_start_compress
 </UL>
 
-<P><STRONG><a name="[18c]"></a>jinit_downsampler</STRONG> (Thumb, 308 bytes, Stack size 32 bytes, jcsample.o(i.jinit_downsampler))
+<P><STRONG><a name="[18f]"></a>jinit_downsampler</STRONG> (Thumb, 308 bytes, Stack size 32 bytes, jcsample.o(i.jinit_downsampler))
 <BR><BR>[Stack]<UL><LI>Max Depth = 32<LI>Call Chain = jinit_downsampler
 </UL>
-<BR>[Called By]<UL><LI><a href="#[18a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;jinit_compress_master
+<BR>[Called By]<UL><LI><a href="#[18d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;jinit_compress_master
 </UL>
 
-<P><STRONG><a name="[18d]"></a>jinit_forward_dct</STRONG> (Thumb, 46 bytes, Stack size 8 bytes, jcdctmgr.o(i.jinit_forward_dct))
+<P><STRONG><a name="[190]"></a>jinit_forward_dct</STRONG> (Thumb, 46 bytes, Stack size 8 bytes, jcdctmgr.o(i.jinit_forward_dct))
 <BR><BR>[Stack]<UL><LI>Max Depth = 8<LI>Call Chain = jinit_forward_dct
 </UL>
-<BR>[Called By]<UL><LI><a href="#[18a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;jinit_compress_master
+<BR>[Called By]<UL><LI><a href="#[18d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;jinit_compress_master
 </UL>
 
-<P><STRONG><a name="[18f]"></a>jinit_huff_encoder</STRONG> (Thumb, 60 bytes, Stack size 8 bytes, jchuff.o(i.jinit_huff_encoder))
+<P><STRONG><a name="[192]"></a>jinit_huff_encoder</STRONG> (Thumb, 60 bytes, Stack size 8 bytes, jchuff.o(i.jinit_huff_encoder))
 <BR><BR>[Stack]<UL><LI>Max Depth = 8<LI>Call Chain = jinit_huff_encoder
 </UL>
-<BR>[Called By]<UL><LI><a href="#[18a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;jinit_compress_master
+<BR>[Called By]<UL><LI><a href="#[18d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;jinit_compress_master
 </UL>
 
-<P><STRONG><a name="[191]"></a>jinit_marker_writer</STRONG> (Thumb, 54 bytes, Stack size 8 bytes, jcmarker.o(i.jinit_marker_writer))
+<P><STRONG><a name="[194]"></a>jinit_marker_writer</STRONG> (Thumb, 54 bytes, Stack size 8 bytes, jcmarker.o(i.jinit_marker_writer))
 <BR><BR>[Stack]<UL><LI>Max Depth = 8<LI>Call Chain = jinit_marker_writer
 </UL>
-<BR>[Called By]<UL><LI><a href="#[18a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;jinit_compress_master
+<BR>[Called By]<UL><LI><a href="#[18d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;jinit_compress_master
 </UL>
 
-<P><STRONG><a name="[192]"></a>jinit_memory_mgr</STRONG> (Thumb, 134 bytes, Stack size 24 bytes, jmemmgr.o(i.jinit_memory_mgr))
+<P><STRONG><a name="[195]"></a>jinit_memory_mgr</STRONG> (Thumb, 134 bytes, Stack size 24 bytes, jmemmgr.o(i.jinit_memory_mgr))
 <BR><BR>[Stack]<UL><LI>Max Depth = 60<LI>Call Chain = jinit_memory_mgr &rArr; jpeg_get_small &rArr; pvPortMalloc &rArr; prvInsertBlockIntoFreeList
 </UL>
-<BR>[Calls]<UL><LI><a href="#[194]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;jpeg_mem_term
-<LI><a href="#[193]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;jpeg_mem_init
+<BR>[Calls]<UL><LI><a href="#[197]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;jpeg_mem_term
+<LI><a href="#[196]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;jpeg_mem_init
 <LI><a href="#[13f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;jpeg_get_small
 </UL>
 <BR>[Called By]<UL><LI><a href="#[14b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;jpeg_CreateCompress
@@ -1475,24 +1475,24 @@ Global Symbols
 <P><STRONG><a name="[14b]"></a>jpeg_CreateCompress</STRONG> (Thumb, 176 bytes, Stack size 24 bytes, jcapimin.o(i.jpeg_CreateCompress))
 <BR><BR>[Stack]<UL><LI>Max Depth = 84<LI>Call Chain = jpeg_CreateCompress &rArr; jinit_memory_mgr &rArr; jpeg_get_small &rArr; pvPortMalloc &rArr; prvInsertBlockIntoFreeList
 </UL>
-<BR>[Calls]<UL><LI><a href="#[192]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;jinit_memory_mgr
-<LI><a href="#[195]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_memclr4
+<BR>[Calls]<UL><LI><a href="#[195]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;jinit_memory_mgr
+<LI><a href="#[198]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_memclr4
 </UL>
 <BR>[Called By]<UL><LI><a href="#[149]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;c_jpeg_grayscale
 </UL>
 
-<P><STRONG><a name="[19a]"></a>jpeg_abort</STRONG> (Thumb, 40 bytes, Stack size 8 bytes, jcomapi.o(i.jpeg_abort))
+<P><STRONG><a name="[19d]"></a>jpeg_abort</STRONG> (Thumb, 40 bytes, Stack size 8 bytes, jcomapi.o(i.jpeg_abort))
 <BR><BR>[Stack]<UL><LI>Max Depth = 8<LI>Call Chain = jpeg_abort
 </UL>
 <BR>[Called By]<UL><LI><a href="#[151]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;jpeg_finish_compress
 </UL>
 
-<P><STRONG><a name="[196]"></a>jpeg_add_quant_table</STRONG> (Thumb, 156 bytes, Stack size 24 bytes, jcparam.o(i.jpeg_add_quant_table))
+<P><STRONG><a name="[199]"></a>jpeg_add_quant_table</STRONG> (Thumb, 156 bytes, Stack size 24 bytes, jcparam.o(i.jpeg_add_quant_table))
 <BR><BR>[Stack]<UL><LI>Max Depth = 32<LI>Call Chain = jpeg_add_quant_table &rArr; jpeg_alloc_quant_table
 </UL>
-<BR>[Calls]<UL><LI><a href="#[197]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;jpeg_alloc_quant_table
+<BR>[Calls]<UL><LI><a href="#[19a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;jpeg_alloc_quant_table
 </UL>
-<BR>[Called By]<UL><LI><a href="#[19e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;jpeg_set_linear_quality
+<BR>[Called By]<UL><LI><a href="#[1a1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;jpeg_set_linear_quality
 </UL>
 
 <P><STRONG><a name="[13c]"></a>jpeg_alloc_huff_table</STRONG> (Thumb, 22 bytes, Stack size 8 bytes, jcomapi.o(i.jpeg_alloc_huff_table))
@@ -1502,29 +1502,29 @@ Global Symbols
 <LI><a href="#[d0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;finish_pass_gather
 </UL>
 
-<P><STRONG><a name="[197]"></a>jpeg_alloc_quant_table</STRONG> (Thumb, 20 bytes, Stack size 8 bytes, jcomapi.o(i.jpeg_alloc_quant_table))
+<P><STRONG><a name="[19a]"></a>jpeg_alloc_quant_table</STRONG> (Thumb, 20 bytes, Stack size 8 bytes, jcomapi.o(i.jpeg_alloc_quant_table))
 <BR><BR>[Stack]<UL><LI>Max Depth = 8<LI>Call Chain = jpeg_alloc_quant_table
 </UL>
-<BR>[Called By]<UL><LI><a href="#[196]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;jpeg_add_quant_table
+<BR>[Called By]<UL><LI><a href="#[199]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;jpeg_add_quant_table
 </UL>
 
-<P><STRONG><a name="[183]"></a>jpeg_calc_jpeg_dimensions</STRONG> (Thumb, 668 bytes, Stack size 24 bytes, jcmaster.o(i.jpeg_calc_jpeg_dimensions))
+<P><STRONG><a name="[186]"></a>jpeg_calc_jpeg_dimensions</STRONG> (Thumb, 668 bytes, Stack size 24 bytes, jcmaster.o(i.jpeg_calc_jpeg_dimensions))
 <BR><BR>[Stack]<UL><LI>Max Depth = 24<LI>Call Chain = jpeg_calc_jpeg_dimensions
 </UL>
-<BR>[Calls]<UL><LI><a href="#[184]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;jdiv_round_up
+<BR>[Calls]<UL><LI><a href="#[187]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;jdiv_round_up
 </UL>
-<BR>[Called By]<UL><LI><a href="#[182]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;initial_setup
+<BR>[Called By]<UL><LI><a href="#[185]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;initial_setup
 </UL>
 
-<P><STRONG><a name="[198]"></a>jpeg_default_colorspace</STRONG> (Thumb, 52 bytes, Stack size 0 bytes, jcparam.o(i.jpeg_default_colorspace))
+<P><STRONG><a name="[19b]"></a>jpeg_default_colorspace</STRONG> (Thumb, 52 bytes, Stack size 0 bytes, jcparam.o(i.jpeg_default_colorspace))
 <BR><BR>[Stack]<UL><LI>Max Depth = 24<LI>Call Chain = jpeg_default_colorspace &rArr; jpeg_set_colorspace
 </UL>
-<BR>[Calls]<UL><LI><a href="#[199]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;jpeg_set_colorspace
+<BR>[Calls]<UL><LI><a href="#[19c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;jpeg_set_colorspace
 </UL>
 <BR>[Called By]<UL><LI><a href="#[14d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;jpeg_set_defaults
 </UL>
 
-<P><STRONG><a name="[170]"></a>jpeg_destroy</STRONG> (Thumb, 22 bytes, Stack size 8 bytes, jcomapi.o(i.jpeg_destroy))
+<P><STRONG><a name="[175]"></a>jpeg_destroy</STRONG> (Thumb, 22 bytes, Stack size 8 bytes, jcomapi.o(i.jpeg_destroy))
 <BR><BR>[Stack]<UL><LI>Max Depth = 8<LI>Call Chain = jpeg_destroy
 </UL>
 <BR>[Called By]<UL><LI><a href="#[152]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;jpeg_destroy_compress
@@ -1534,7 +1534,7 @@ Global Symbols
 <P><STRONG><a name="[152]"></a>jpeg_destroy_compress</STRONG> (Thumb, 4 bytes, Stack size 0 bytes, jcapimin.o(i.jpeg_destroy_compress))
 <BR><BR>[Stack]<UL><LI>Max Depth = 8<LI>Call Chain = jpeg_destroy_compress &rArr; jpeg_destroy
 </UL>
-<BR>[Calls]<UL><LI><a href="#[170]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;jpeg_destroy
+<BR>[Calls]<UL><LI><a href="#[175]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;jpeg_destroy
 </UL>
 <BR>[Called By]<UL><LI><a href="#[149]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;c_jpeg_grayscale
 </UL>
@@ -1547,7 +1547,7 @@ Global Symbols
 <P><STRONG><a name="[be]"></a>jpeg_fdct_10x5</STRONG> (Thumb, 570 bytes, Stack size 72 bytes, jfdctint.o(i.jpeg_fdct_10x5))
 <BR><BR>[Stack]<UL><LI>Max Depth = 72<LI>Call Chain = jpeg_fdct_10x5
 </UL>
-<BR>[Calls]<UL><LI><a href="#[195]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_memclr4
+<BR>[Calls]<UL><LI><a href="#[198]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_memclr4
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> jcdctmgr.o(i.start_pass_fdctmgr)
 </UL>
@@ -1564,7 +1564,7 @@ Global Symbols
 <P><STRONG><a name="[bd]"></a>jpeg_fdct_12x6</STRONG> (Thumb, 752 bytes, Stack size 152 bytes, jfdctint.o(i.jpeg_fdct_12x6))
 <BR><BR>[Stack]<UL><LI>Max Depth = 152<LI>Call Chain = jpeg_fdct_12x6
 </UL>
-<BR>[Calls]<UL><LI><a href="#[195]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_memclr4
+<BR>[Calls]<UL><LI><a href="#[198]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_memclr4
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> jcdctmgr.o(i.start_pass_fdctmgr)
 </UL>
@@ -1581,7 +1581,7 @@ Global Symbols
 <P><STRONG><a name="[bc]"></a>jpeg_fdct_14x7</STRONG> (Thumb, 928 bytes, Stack size 168 bytes, jfdctint.o(i.jpeg_fdct_14x7))
 <BR><BR>[Stack]<UL><LI>Max Depth = 168<LI>Call Chain = jpeg_fdct_14x7
 </UL>
-<BR>[Calls]<UL><LI><a href="#[195]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_memclr4
+<BR>[Calls]<UL><LI><a href="#[198]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_memclr4
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> jcdctmgr.o(i.start_pass_fdctmgr)
 </UL>
@@ -1603,119 +1603,119 @@ Global Symbols
 <P><STRONG><a name="[ac]"></a>jpeg_fdct_1x1</STRONG> (Thumb, 30 bytes, Stack size 16 bytes, jfdctint.o(i.jpeg_fdct_1x1))
 <BR><BR>[Stack]<UL><LI>Max Depth = 16<LI>Call Chain = jpeg_fdct_1x1
 </UL>
-<BR>[Calls]<UL><LI><a href="#[195]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_memclr4
+<BR>[Calls]<UL><LI><a href="#[198]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_memclr4
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> jcdctmgr.o(i.start_pass_fdctmgr)
 </UL>
 <P><STRONG><a name="[ca]"></a>jpeg_fdct_1x2</STRONG> (Thumb, 42 bytes, Stack size 16 bytes, jfdctint.o(i.jpeg_fdct_1x2))
 <BR><BR>[Stack]<UL><LI>Max Depth = 16<LI>Call Chain = jpeg_fdct_1x2
 </UL>
-<BR>[Calls]<UL><LI><a href="#[195]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_memclr4
+<BR>[Calls]<UL><LI><a href="#[198]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_memclr4
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> jcdctmgr.o(i.start_pass_fdctmgr)
 </UL>
 <P><STRONG><a name="[c2]"></a>jpeg_fdct_2x1</STRONG> (Thumb, 42 bytes, Stack size 16 bytes, jfdctint.o(i.jpeg_fdct_2x1))
 <BR><BR>[Stack]<UL><LI>Max Depth = 16<LI>Call Chain = jpeg_fdct_2x1
 </UL>
-<BR>[Calls]<UL><LI><a href="#[195]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_memclr4
+<BR>[Calls]<UL><LI><a href="#[198]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_memclr4
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> jcdctmgr.o(i.start_pass_fdctmgr)
 </UL>
 <P><STRONG><a name="[ad]"></a>jpeg_fdct_2x2</STRONG> (Thumb, 70 bytes, Stack size 16 bytes, jfdctint.o(i.jpeg_fdct_2x2))
 <BR><BR>[Stack]<UL><LI>Max Depth = 16<LI>Call Chain = jpeg_fdct_2x2
 </UL>
-<BR>[Calls]<UL><LI><a href="#[195]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_memclr4
+<BR>[Calls]<UL><LI><a href="#[198]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_memclr4
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> jcdctmgr.o(i.start_pass_fdctmgr)
 </UL>
 <P><STRONG><a name="[c9]"></a>jpeg_fdct_2x4</STRONG> (Thumb, 144 bytes, Stack size 24 bytes, jfdctint.o(i.jpeg_fdct_2x4))
 <BR><BR>[Stack]<UL><LI>Max Depth = 24<LI>Call Chain = jpeg_fdct_2x4
 </UL>
-<BR>[Calls]<UL><LI><a href="#[195]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_memclr4
+<BR>[Calls]<UL><LI><a href="#[198]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_memclr4
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> jcdctmgr.o(i.start_pass_fdctmgr)
 </UL>
 <P><STRONG><a name="[ae]"></a>jpeg_fdct_3x3</STRONG> (Thumb, 184 bytes, Stack size 24 bytes, jfdctint.o(i.jpeg_fdct_3x3))
 <BR><BR>[Stack]<UL><LI>Max Depth = 24<LI>Call Chain = jpeg_fdct_3x3
 </UL>
-<BR>[Calls]<UL><LI><a href="#[195]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_memclr4
+<BR>[Calls]<UL><LI><a href="#[198]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_memclr4
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> jcdctmgr.o(i.start_pass_fdctmgr)
 </UL>
 <P><STRONG><a name="[c8]"></a>jpeg_fdct_3x6</STRONG> (Thumb, 308 bytes, Stack size 40 bytes, jfdctint.o(i.jpeg_fdct_3x6))
 <BR><BR>[Stack]<UL><LI>Max Depth = 40<LI>Call Chain = jpeg_fdct_3x6
 </UL>
-<BR>[Calls]<UL><LI><a href="#[195]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_memclr4
+<BR>[Calls]<UL><LI><a href="#[198]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_memclr4
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> jcdctmgr.o(i.start_pass_fdctmgr)
 </UL>
 <P><STRONG><a name="[c1]"></a>jpeg_fdct_4x2</STRONG> (Thumb, 158 bytes, Stack size 32 bytes, jfdctint.o(i.jpeg_fdct_4x2))
 <BR><BR>[Stack]<UL><LI>Max Depth = 32<LI>Call Chain = jpeg_fdct_4x2
 </UL>
-<BR>[Calls]<UL><LI><a href="#[195]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_memclr4
+<BR>[Calls]<UL><LI><a href="#[198]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_memclr4
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> jcdctmgr.o(i.start_pass_fdctmgr)
 </UL>
 <P><STRONG><a name="[af]"></a>jpeg_fdct_4x4</STRONG> (Thumb, 218 bytes, Stack size 32 bytes, jfdctint.o(i.jpeg_fdct_4x4))
 <BR><BR>[Stack]<UL><LI>Max Depth = 32<LI>Call Chain = jpeg_fdct_4x4
 </UL>
-<BR>[Calls]<UL><LI><a href="#[195]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_memclr4
+<BR>[Calls]<UL><LI><a href="#[198]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_memclr4
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> jcdctmgr.o(i.start_pass_fdctmgr)
 </UL>
 <P><STRONG><a name="[c7]"></a>jpeg_fdct_4x8</STRONG> (Thumb, 432 bytes, Stack size 48 bytes, jfdctint.o(i.jpeg_fdct_4x8))
 <BR><BR>[Stack]<UL><LI>Max Depth = 48<LI>Call Chain = jpeg_fdct_4x8
 </UL>
-<BR>[Calls]<UL><LI><a href="#[195]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_memclr4
+<BR>[Calls]<UL><LI><a href="#[198]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_memclr4
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> jcdctmgr.o(i.start_pass_fdctmgr)
 </UL>
 <P><STRONG><a name="[c6]"></a>jpeg_fdct_5x10</STRONG> (Thumb, 604 bytes, Stack size 192 bytes, jfdctint.o(i.jpeg_fdct_5x10))
 <BR><BR>[Stack]<UL><LI>Max Depth = 192<LI>Call Chain = jpeg_fdct_5x10
 </UL>
-<BR>[Calls]<UL><LI><a href="#[195]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_memclr4
+<BR>[Calls]<UL><LI><a href="#[198]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_memclr4
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> jcdctmgr.o(i.start_pass_fdctmgr)
 </UL>
 <P><STRONG><a name="[b0]"></a>jpeg_fdct_5x5</STRONG> (Thumb, 326 bytes, Stack size 40 bytes, jfdctint.o(i.jpeg_fdct_5x5))
 <BR><BR>[Stack]<UL><LI>Max Depth = 40<LI>Call Chain = jpeg_fdct_5x5
 </UL>
-<BR>[Calls]<UL><LI><a href="#[195]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_memclr4
+<BR>[Calls]<UL><LI><a href="#[198]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_memclr4
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> jcdctmgr.o(i.start_pass_fdctmgr)
 </UL>
 <P><STRONG><a name="[c5]"></a>jpeg_fdct_6x12</STRONG> (Thumb, 762 bytes, Stack size 288 bytes, jfdctint.o(i.jpeg_fdct_6x12))
 <BR><BR>[Stack]<UL><LI>Max Depth = 288<LI>Call Chain = jpeg_fdct_6x12
 </UL>
-<BR>[Calls]<UL><LI><a href="#[195]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_memclr4
+<BR>[Calls]<UL><LI><a href="#[198]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_memclr4
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> jcdctmgr.o(i.start_pass_fdctmgr)
 </UL>
 <P><STRONG><a name="[c0]"></a>jpeg_fdct_6x3</STRONG> (Thumb, 268 bytes, Stack size 48 bytes, jfdctint.o(i.jpeg_fdct_6x3))
 <BR><BR>[Stack]<UL><LI>Max Depth = 48<LI>Call Chain = jpeg_fdct_6x3
 </UL>
-<BR>[Calls]<UL><LI><a href="#[195]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_memclr4
+<BR>[Calls]<UL><LI><a href="#[198]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_memclr4
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> jcdctmgr.o(i.start_pass_fdctmgr)
 </UL>
 <P><STRONG><a name="[b1]"></a>jpeg_fdct_6x6</STRONG> (Thumb, 388 bytes, Stack size 48 bytes, jfdctint.o(i.jpeg_fdct_6x6))
 <BR><BR>[Stack]<UL><LI>Max Depth = 48<LI>Call Chain = jpeg_fdct_6x6
 </UL>
-<BR>[Calls]<UL><LI><a href="#[195]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_memclr4
+<BR>[Calls]<UL><LI><a href="#[198]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_memclr4
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> jcdctmgr.o(i.start_pass_fdctmgr)
 </UL>
 <P><STRONG><a name="[c4]"></a>jpeg_fdct_7x14</STRONG> (Thumb, 936 bytes, Stack size 360 bytes, jfdctint.o(i.jpeg_fdct_7x14))
 <BR><BR>[Stack]<UL><LI>Max Depth = 360<LI>Call Chain = jpeg_fdct_7x14
 </UL>
-<BR>[Calls]<UL><LI><a href="#[195]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_memclr4
+<BR>[Calls]<UL><LI><a href="#[198]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_memclr4
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> jcdctmgr.o(i.start_pass_fdctmgr)
 </UL>
 <P><STRONG><a name="[b2]"></a>jpeg_fdct_7x7</STRONG> (Thumb, 596 bytes, Stack size 48 bytes, jfdctint.o(i.jpeg_fdct_7x7))
 <BR><BR>[Stack]<UL><LI>Max Depth = 48<LI>Call Chain = jpeg_fdct_7x7
 </UL>
-<BR>[Calls]<UL><LI><a href="#[195]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_memclr4
+<BR>[Calls]<UL><LI><a href="#[198]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_memclr4
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> jcdctmgr.o(i.start_pass_fdctmgr)
 </UL>
@@ -1727,7 +1727,7 @@ Global Symbols
 <P><STRONG><a name="[bf]"></a>jpeg_fdct_8x4</STRONG> (Thumb, 450 bytes, Stack size 56 bytes, jfdctint.o(i.jpeg_fdct_8x4))
 <BR><BR>[Stack]<UL><LI>Max Depth = 56<LI>Call Chain = jpeg_fdct_8x4
 </UL>
-<BR>[Calls]<UL><LI><a href="#[195]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_memclr4
+<BR>[Calls]<UL><LI><a href="#[198]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_memclr4
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> jcdctmgr.o(i.start_pass_fdctmgr)
 </UL>
@@ -1754,23 +1754,23 @@ Global Symbols
 <P><STRONG><a name="[151]"></a>jpeg_finish_compress</STRONG> (Thumb, 178 bytes, Stack size 16 bytes, jcapimin.o(i.jpeg_finish_compress))
 <BR><BR>[Stack]<UL><LI>Max Depth = 24<LI>Call Chain = jpeg_finish_compress &rArr; jpeg_abort
 </UL>
-<BR>[Calls]<UL><LI><a href="#[19a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;jpeg_abort
+<BR>[Calls]<UL><LI><a href="#[19d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;jpeg_abort
 </UL>
 <BR>[Called By]<UL><LI><a href="#[149]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;c_jpeg_grayscale
 </UL>
 
-<P><STRONG><a name="[17f]"></a>jpeg_free_large</STRONG> (Thumb, 6 bytes, Stack size 0 bytes, jmemnobs.o(i.jpeg_free_large))
+<P><STRONG><a name="[182]"></a>jpeg_free_large</STRONG> (Thumb, 6 bytes, Stack size 0 bytes, jmemnobs.o(i.jpeg_free_large))
 <BR><BR>[Stack]<UL><LI>Max Depth = 20<LI>Call Chain = jpeg_free_large &rArr; vPortFree &rArr; prvInsertBlockIntoFreeList
 </UL>
-<BR>[Calls]<UL><LI><a href="#[19b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;vPortFree
+<BR>[Calls]<UL><LI><a href="#[19e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;vPortFree
 </UL>
 <BR>[Called By]<UL><LI><a href="#[99]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;free_pool
 </UL>
 
-<P><STRONG><a name="[180]"></a>jpeg_free_small</STRONG> (Thumb, 6 bytes, Stack size 0 bytes, jmemnobs.o(i.jpeg_free_small))
+<P><STRONG><a name="[183]"></a>jpeg_free_small</STRONG> (Thumb, 6 bytes, Stack size 0 bytes, jmemnobs.o(i.jpeg_free_small))
 <BR><BR>[Stack]<UL><LI>Max Depth = 20<LI>Call Chain = jpeg_free_small &rArr; vPortFree &rArr; prvInsertBlockIntoFreeList
 </UL>
-<BR>[Calls]<UL><LI><a href="#[19b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;vPortFree
+<BR>[Calls]<UL><LI><a href="#[19e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;vPortFree
 </UL>
 <BR>[Called By]<UL><LI><a href="#[9a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;self_destruct
 <LI><a href="#[99]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;free_pool
@@ -1779,7 +1779,7 @@ Global Symbols
 <P><STRONG><a name="[13e]"></a>jpeg_get_large</STRONG> (Thumb, 6 bytes, Stack size 0 bytes, jmemnobs.o(i.jpeg_get_large))
 <BR><BR>[Stack]<UL><LI>Max Depth = 36<LI>Call Chain = jpeg_get_large &rArr; pvPortMalloc &rArr; prvInsertBlockIntoFreeList
 </UL>
-<BR>[Calls]<UL><LI><a href="#[19c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;pvPortMalloc
+<BR>[Calls]<UL><LI><a href="#[19f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;pvPortMalloc
 </UL>
 <BR>[Called By]<UL><LI><a href="#[91]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;alloc_large
 </UL>
@@ -1787,61 +1787,61 @@ Global Symbols
 <P><STRONG><a name="[13f]"></a>jpeg_get_small</STRONG> (Thumb, 6 bytes, Stack size 0 bytes, jmemnobs.o(i.jpeg_get_small))
 <BR><BR>[Stack]<UL><LI>Max Depth = 36<LI>Call Chain = jpeg_get_small &rArr; pvPortMalloc &rArr; prvInsertBlockIntoFreeList
 </UL>
-<BR>[Calls]<UL><LI><a href="#[19c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;pvPortMalloc
+<BR>[Calls]<UL><LI><a href="#[19f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;pvPortMalloc
 </UL>
-<BR>[Called By]<UL><LI><a href="#[192]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;jinit_memory_mgr
+<BR>[Called By]<UL><LI><a href="#[195]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;jinit_memory_mgr
 <LI><a href="#[90]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;alloc_small
 </UL>
 
-<P><STRONG><a name="[1ab]"></a>jpeg_mem_available</STRONG> (Thumb, 4 bytes, Stack size 0 bytes, jmemnobs.o(i.jpeg_mem_available))
+<P><STRONG><a name="[1ad]"></a>jpeg_mem_available</STRONG> (Thumb, 4 bytes, Stack size 0 bytes, jmemnobs.o(i.jpeg_mem_available))
 <BR><BR>[Called By]<UL><LI><a href="#[96]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;realize_virt_arrays
 </UL>
 
 <P><STRONG><a name="[14c]"></a>jpeg_mem_dest</STRONG> (Thumb, 132 bytes, Stack size 24 bytes, jdatadst.o(i.jpeg_mem_dest))
 <BR><BR>[Stack]<UL><LI>Max Depth = 44<LI>Call Chain = jpeg_mem_dest &rArr; malloc
 </UL>
-<BR>[Calls]<UL><LI><a href="#[16c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;malloc
+<BR>[Calls]<UL><LI><a href="#[171]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;malloc
 </UL>
 <BR>[Called By]<UL><LI><a href="#[149]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;c_jpeg_grayscale
 </UL>
 
-<P><STRONG><a name="[193]"></a>jpeg_mem_init</STRONG> (Thumb, 4 bytes, Stack size 0 bytes, jmemnobs.o(i.jpeg_mem_init))
-<BR><BR>[Called By]<UL><LI><a href="#[192]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;jinit_memory_mgr
+<P><STRONG><a name="[196]"></a>jpeg_mem_init</STRONG> (Thumb, 4 bytes, Stack size 0 bytes, jmemnobs.o(i.jpeg_mem_init))
+<BR><BR>[Called By]<UL><LI><a href="#[195]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;jinit_memory_mgr
 </UL>
 
-<P><STRONG><a name="[194]"></a>jpeg_mem_term</STRONG> (Thumb, 2 bytes, Stack size 0 bytes, jmemnobs.o(i.jpeg_mem_term))
-<BR><BR>[Called By]<UL><LI><a href="#[192]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;jinit_memory_mgr
+<P><STRONG><a name="[197]"></a>jpeg_mem_term</STRONG> (Thumb, 2 bytes, Stack size 0 bytes, jmemnobs.o(i.jpeg_mem_term))
+<BR><BR>[Called By]<UL><LI><a href="#[195]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;jinit_memory_mgr
 <LI><a href="#[9a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;self_destruct
 </UL>
 
-<P><STRONG><a name="[1ac]"></a>jpeg_open_backing_store</STRONG> (Thumb, 12 bytes, Stack size 0 bytes, jmemnobs.o(i.jpeg_open_backing_store))
+<P><STRONG><a name="[1ae]"></a>jpeg_open_backing_store</STRONG> (Thumb, 12 bytes, Stack size 0 bytes, jmemnobs.o(i.jpeg_open_backing_store))
 <BR><BR>[Called By]<UL><LI><a href="#[96]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;realize_virt_arrays
 </UL>
 
-<P><STRONG><a name="[19f]"></a>jpeg_quality_scaling</STRONG> (Thumb, 40 bytes, Stack size 0 bytes, jcparam.o(i.jpeg_quality_scaling))
+<P><STRONG><a name="[1a2]"></a>jpeg_quality_scaling</STRONG> (Thumb, 40 bytes, Stack size 0 bytes, jcparam.o(i.jpeg_quality_scaling))
 <BR><BR>[Called By]<UL><LI><a href="#[14e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;jpeg_set_quality
 </UL>
 
-<P><STRONG><a name="[199]"></a>jpeg_set_colorspace</STRONG> (Thumb, 450 bytes, Stack size 24 bytes, jcparam.o(i.jpeg_set_colorspace))
+<P><STRONG><a name="[19c]"></a>jpeg_set_colorspace</STRONG> (Thumb, 450 bytes, Stack size 24 bytes, jcparam.o(i.jpeg_set_colorspace))
 <BR><BR>[Stack]<UL><LI>Max Depth = 24<LI>Call Chain = jpeg_set_colorspace
 </UL>
-<BR>[Called By]<UL><LI><a href="#[198]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;jpeg_default_colorspace
+<BR>[Called By]<UL><LI><a href="#[19b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;jpeg_default_colorspace
 </UL>
 
 <P><STRONG><a name="[14d]"></a>jpeg_set_defaults</STRONG> (Thumb, 244 bytes, Stack size 16 bytes, jcparam.o(i.jpeg_set_defaults))
 <BR><BR>[Stack]<UL><LI>Max Depth = 80<LI>Call Chain = jpeg_set_defaults &rArr; jpeg_set_quality &rArr; jpeg_set_linear_quality &rArr; jpeg_add_quant_table &rArr; jpeg_alloc_quant_table
 </UL>
 <BR>[Calls]<UL><LI><a href="#[14e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;jpeg_set_quality
-<LI><a href="#[198]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;jpeg_default_colorspace
+<LI><a href="#[19b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;jpeg_default_colorspace
 <LI><a href="#[13b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;add_huff_table
 </UL>
 <BR>[Called By]<UL><LI><a href="#[149]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;c_jpeg_grayscale
 </UL>
 
-<P><STRONG><a name="[19e]"></a>jpeg_set_linear_quality</STRONG> (Thumb, 36 bytes, Stack size 24 bytes, jcparam.o(i.jpeg_set_linear_quality))
+<P><STRONG><a name="[1a1]"></a>jpeg_set_linear_quality</STRONG> (Thumb, 36 bytes, Stack size 24 bytes, jcparam.o(i.jpeg_set_linear_quality))
 <BR><BR>[Stack]<UL><LI>Max Depth = 56<LI>Call Chain = jpeg_set_linear_quality &rArr; jpeg_add_quant_table &rArr; jpeg_alloc_quant_table
 </UL>
-<BR>[Calls]<UL><LI><a href="#[196]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;jpeg_add_quant_table
+<BR>[Calls]<UL><LI><a href="#[199]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;jpeg_add_quant_table
 </UL>
 <BR>[Called By]<UL><LI><a href="#[14e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;jpeg_set_quality
 </UL>
@@ -1849,8 +1849,8 @@ Global Symbols
 <P><STRONG><a name="[14e]"></a>jpeg_set_quality</STRONG> (Thumb, 22 bytes, Stack size 8 bytes, jcparam.o(i.jpeg_set_quality))
 <BR><BR>[Stack]<UL><LI>Max Depth = 64<LI>Call Chain = jpeg_set_quality &rArr; jpeg_set_linear_quality &rArr; jpeg_add_quant_table &rArr; jpeg_alloc_quant_table
 </UL>
-<BR>[Calls]<UL><LI><a href="#[19e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;jpeg_set_linear_quality
-<LI><a href="#[19f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;jpeg_quality_scaling
+<BR>[Calls]<UL><LI><a href="#[1a1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;jpeg_set_linear_quality
+<LI><a href="#[1a2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;jpeg_quality_scaling
 </UL>
 <BR>[Called By]<UL><LI><a href="#[149]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;c_jpeg_grayscale
 <LI><a href="#[14d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;jpeg_set_defaults
@@ -1859,8 +1859,8 @@ Global Symbols
 <P><STRONG><a name="[14f]"></a>jpeg_start_compress</STRONG> (Thumb, 96 bytes, Stack size 16 bytes, jcapistd.o(i.jpeg_start_compress))
 <BR><BR>[Stack]<UL><LI>Max Depth = 2744<LI>Call Chain = jpeg_start_compress &rArr; jinit_compress_master &rArr; jinit_c_master_control &rArr; validate_script
 </UL>
-<BR>[Calls]<UL><LI><a href="#[18a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;jinit_compress_master
-<LI><a href="#[1a0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;jpeg_suppress_tables
+<BR>[Calls]<UL><LI><a href="#[18d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;jinit_compress_master
+<LI><a href="#[1a3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;jpeg_suppress_tables
 </UL>
 <BR>[Called By]<UL><LI><a href="#[149]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;c_jpeg_grayscale
 </UL>
@@ -1869,7 +1869,7 @@ Global Symbols
 <BR><BR>[Called By]<UL><LI><a href="#[149]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;c_jpeg_grayscale
 </UL>
 
-<P><STRONG><a name="[1a0]"></a>jpeg_suppress_tables</STRONG> (Thumb, 54 bytes, Stack size 8 bytes, jcapimin.o(i.jpeg_suppress_tables))
+<P><STRONG><a name="[1a3]"></a>jpeg_suppress_tables</STRONG> (Thumb, 54 bytes, Stack size 8 bytes, jcapimin.o(i.jpeg_suppress_tables))
 <BR><BR>[Stack]<UL><LI>Max Depth = 8<LI>Call Chain = jpeg_suppress_tables
 </UL>
 <BR>[Called By]<UL><LI><a href="#[14f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;jpeg_start_compress
@@ -1881,20 +1881,20 @@ Global Symbols
 <BR>[Called By]<UL><LI><a href="#[149]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;c_jpeg_grayscale
 </UL>
 
-<P><STRONG><a name="[186]"></a>jround_up</STRONG> (Thumb, 16 bytes, Stack size 0 bytes, jutils.o(i.jround_up))
-<BR><BR>[Called By]<UL><LI><a href="#[185]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;jinit_c_coef_controller
+<P><STRONG><a name="[189]"></a>jround_up</STRONG> (Thumb, 16 bytes, Stack size 0 bytes, jutils.o(i.jround_up))
+<BR><BR>[Called By]<UL><LI><a href="#[188]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;jinit_c_coef_controller
 </UL>
 
 <P><STRONG><a name="[64]"></a>main</STRONG> (Thumb, 210 bytes, Stack size 8 bytes, main.o(i.main))
 <BR><BR>[Stack]<UL><LI>Max Depth = 3360<LI>Call Chain = main &rArr; c_jpeg_grayscale &rArr; jpeg_start_compress &rArr; jinit_compress_master &rArr; jinit_c_master_control &rArr; validate_script
 </UL>
 <BR>[Calls]<UL><LI><a href="#[142]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;uart_send_buf
-<LI><a href="#[1a4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;uart_rec_start
-<LI><a href="#[1a2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;protocol_init
-<LI><a href="#[17b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;flash_read_buf
-<LI><a href="#[17a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;flash_init
+<LI><a href="#[1a7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;uart_rec_start
+<LI><a href="#[1a5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;protocol_init
+<LI><a href="#[17f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;flash_read_buf
+<LI><a href="#[17e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;flash_init
 <LI><a href="#[149]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;c_jpeg_grayscale
-<LI><a href="#[1a1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MX_LIBJPEG_Init
+<LI><a href="#[1a4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MX_LIBJPEG_Init
 <LI><a href="#[119]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_UART_Init
 <LI><a href="#[fa]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_NVIC_SetPriority
 <LI><a href="#[11d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_NVIC_EnableIRQ
@@ -1904,54 +1904,61 @@ Global Symbols
 <LI><a href="#[124]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MX_SPI5_Init
 <LI><a href="#[122]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MX_GPIO_Init
 <LI><a href="#[121]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MX_FMC_Init
-<LI><a href="#[1a3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__2printf
+<LI><a href="#[1a6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__2printf
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> entry9a.o(.ARM.Collect$$$$0000000B)
 </UL>
-<P><STRONG><a name="[16c]"></a>malloc</STRONG> (Thumb, 92 bytes, Stack size 20 bytes, malloc.o(i.malloc))
+<P><STRONG><a name="[171]"></a>malloc</STRONG> (Thumb, 92 bytes, Stack size 20 bytes, malloc.o(i.malloc))
 <BR><BR>[Stack]<UL><LI>Max Depth = 20<LI>Call Chain = malloc
 </UL>
 <BR>[Called By]<UL><LI><a href="#[14c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;jpeg_mem_dest
 <LI><a href="#[9c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;empty_mem_output_buffer
 </UL>
 
-<P><STRONG><a name="[1a7]"></a>pro_file_ack</STRONG> (Thumb, 12 bytes, Stack size 0 bytes, protocol.o(i.pro_file_ack))
-<BR><BR>[Stack]<UL><LI>Max Depth = 4808<LI>Call Chain = pro_file_ack &rArr; protocol_send &rArr; b_tp_send_data &rArr; _b_tp_unpack_send &rArr; b_tp_port_send &rArr; uart_send_buf &rArr; HAL_UART_Transmit &rArr; UART_WaitOnFlagUntilTimeout
+<P><STRONG><a name="[15a]"></a>pro_algo_p_ack</STRONG> (Thumb, 12 bytes, Stack size 0 bytes, protocol.o(i.pro_algo_p_ack))
+<BR><BR>[Stack]<UL><LI>Max Depth = 4808<LI>Call Chain = pro_algo_p_ack &rArr; protocol_send &rArr; b_tp_send_data &rArr; _b_tp_unpack_send &rArr; b_tp_port_send &rArr; uart_send_buf &rArr; HAL_UART_Transmit &rArr; UART_WaitOnFlagUntilTimeout
 </UL>
-<BR>[Calls]<UL><LI><a href="#[1a8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;protocol_send
+<BR>[Calls]<UL><LI><a href="#[1aa]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;protocol_send
 </UL>
-<BR>[Called By]<UL><LI><a href="#[a3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;protocol_cb
+<BR>[Called By]<UL><LI><a href="#[156]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;dispatch_cmd
 </UL>
 
-<P><STRONG><a name="[a3]"></a>protocol_cb</STRONG> (Thumb, 94 bytes, Stack size 16 bytes, protocol.o(i.protocol_cb))
-<BR><BR>[Stack]<UL><LI>Max Depth = 4824<LI>Call Chain = protocol_cb &rArr; pro_file_ack &rArr; protocol_send &rArr; b_tp_send_data &rArr; _b_tp_unpack_send &rArr; b_tp_port_send &rArr; uart_send_buf &rArr; HAL_UART_Transmit &rArr; UART_WaitOnFlagUntilTimeout
+<P><STRONG><a name="[159]"></a>pro_file_ack</STRONG> (Thumb, 12 bytes, Stack size 0 bytes, protocol.o(i.pro_file_ack))
+<BR><BR>[Stack]<UL><LI>Max Depth = 4808<LI>Call Chain = pro_file_ack &rArr; protocol_send &rArr; b_tp_send_data &rArr; _b_tp_unpack_send &rArr; b_tp_port_send &rArr; uart_send_buf &rArr; HAL_UART_Transmit &rArr; UART_WaitOnFlagUntilTimeout
 </UL>
-<BR>[Calls]<UL><LI><a href="#[17c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;flash_write_buf
-<LI><a href="#[177]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;flash_erase_xsector
-<LI><a href="#[1a7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;pro_file_ack
+<BR>[Calls]<UL><LI><a href="#[1aa]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;protocol_send
+</UL>
+<BR>[Called By]<UL><LI><a href="#[156]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;dispatch_cmd
+</UL>
+
+<P><STRONG><a name="[a3]"></a>protocol_cb</STRONG> (Thumb, 48 bytes, Stack size 8 bytes, protocol.o(i.protocol_cb))
+<BR><BR>[Stack]<UL><LI>Max Depth = 4832<LI>Call Chain = protocol_cb &rArr; dispatch_cmd &rArr; pro_file_ack &rArr; protocol_send &rArr; b_tp_send_data &rArr; _b_tp_unpack_send &rArr; b_tp_port_send &rArr; uart_send_buf &rArr; HAL_UART_Transmit &rArr; UART_WaitOnFlagUntilTimeout
+</UL>
+<BR>[Calls]<UL><LI><a href="#[156]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;dispatch_cmd
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> protocol.o(i.protocol_init)
 </UL>
-<P><STRONG><a name="[1a2]"></a>protocol_init</STRONG> (Thumb, 6 bytes, Stack size 0 bytes, protocol.o(i.protocol_init))
+<P><STRONG><a name="[1a5]"></a>protocol_init</STRONG> (Thumb, 6 bytes, Stack size 0 bytes, protocol.o(i.protocol_init))
 <BR><BR>[Calls]<UL><LI><a href="#[146]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;b_tp_reg_callback
 </UL>
 <BR>[Called By]<UL><LI><a href="#[64]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
 </UL>
 
-<P><STRONG><a name="[1a8]"></a>protocol_send</STRONG> (Thumb, 42 bytes, Stack size 264 bytes, protocol.o(i.protocol_send))
+<P><STRONG><a name="[1aa]"></a>protocol_send</STRONG> (Thumb, 42 bytes, Stack size 264 bytes, protocol.o(i.protocol_send))
 <BR><BR>[Stack]<UL><LI>Max Depth = 4808<LI>Call Chain = protocol_send &rArr; b_tp_send_data &rArr; _b_tp_unpack_send &rArr; b_tp_port_send &rArr; uart_send_buf &rArr; HAL_UART_Transmit &rArr; UART_WaitOnFlagUntilTimeout
 </UL>
 <BR>[Calls]<UL><LI><a href="#[147]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;b_tp_send_data
 <LI><a href="#[135]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_memcpy
 </UL>
-<BR>[Called By]<UL><LI><a href="#[1a7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;pro_file_ack
+<BR>[Called By]<UL><LI><a href="#[159]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;pro_file_ack
+<LI><a href="#[15a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;pro_algo_p_ack
 </UL>
 
-<P><STRONG><a name="[19c]"></a>pvPortMalloc</STRONG> (Thumb, 140 bytes, Stack size 24 bytes, heap_4.o(i.pvPortMalloc))
+<P><STRONG><a name="[19f]"></a>pvPortMalloc</STRONG> (Thumb, 140 bytes, Stack size 24 bytes, heap_4.o(i.pvPortMalloc))
 <BR><BR>[Stack]<UL><LI>Max Depth = 36<LI>Call Chain = pvPortMalloc &rArr; prvInsertBlockIntoFreeList
 </UL>
-<BR>[Calls]<UL><LI><a href="#[1aa]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;prvInsertBlockIntoFreeList
-<LI><a href="#[1a9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;prvHeapInit
+<BR>[Calls]<UL><LI><a href="#[1ac]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;prvInsertBlockIntoFreeList
+<LI><a href="#[1ab]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;prvHeapInit
 </UL>
 <BR>[Called By]<UL><LI><a href="#[13f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;jpeg_get_small
 <LI><a href="#[13e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;jpeg_get_large
@@ -1967,7 +1974,7 @@ Global Symbols
 <BR>[Called By]<UL><LI><a href="#[2f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;USART1_IRQHandler
 </UL>
 
-<P><STRONG><a name="[1a4]"></a>uart_rec_start</STRONG> (Thumb, 30 bytes, Stack size 8 bytes, uart.o(i.uart_rec_start))
+<P><STRONG><a name="[1a7]"></a>uart_rec_start</STRONG> (Thumb, 30 bytes, Stack size 8 bytes, uart.o(i.uart_rec_start))
 <BR><BR>[Stack]<UL><LI>Max Depth = 68<LI>Call Chain = uart_rec_start &rArr; HAL_UART_Receive_DMA &rArr; HAL_DMA_Start_IT &rArr; DMA_SetConfig
 </UL>
 <BR>[Calls]<UL><LI><a href="#[11e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_UART_Receive_DMA
@@ -1984,13 +1991,13 @@ Global Symbols
 <LI><a href="#[136]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;b_tp_port_send
 </UL>
 
-<P><STRONG><a name="[19b]"></a>vPortFree</STRONG> (Thumb, 46 bytes, Stack size 8 bytes, heap_4.o(i.vPortFree))
+<P><STRONG><a name="[19e]"></a>vPortFree</STRONG> (Thumb, 46 bytes, Stack size 8 bytes, heap_4.o(i.vPortFree))
 <BR><BR>[Stack]<UL><LI>Max Depth = 20<LI>Call Chain = vPortFree &rArr; prvInsertBlockIntoFreeList
 </UL>
-<BR>[Calls]<UL><LI><a href="#[1aa]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;prvInsertBlockIntoFreeList
+<BR>[Calls]<UL><LI><a href="#[1ac]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;prvInsertBlockIntoFreeList
 </UL>
-<BR>[Called By]<UL><LI><a href="#[180]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;jpeg_free_small
-<LI><a href="#[17f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;jpeg_free_large
+<BR>[Called By]<UL><LI><a href="#[183]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;jpeg_free_small
+<LI><a href="#[182]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;jpeg_free_large
 </UL>
 <P>
 <H3>
@@ -2171,48 +2178,59 @@ Local Symbols
 <BR>[Called By]<UL><LI><a href="#[147]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;b_tp_send_data
 </UL>
 
-<P><STRONG><a name="[1a9]"></a>prvHeapInit</STRONG> (Thumb, 66 bytes, Stack size 0 bytes, heap_4.o(i.prvHeapInit))
-<BR><BR>[Called By]<UL><LI><a href="#[19c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;pvPortMalloc
+<P><STRONG><a name="[156]"></a>dispatch_cmd</STRONG> (Thumb, 116 bytes, Stack size 16 bytes, protocol.o(i.dispatch_cmd))
+<BR><BR>[Stack]<UL><LI>Max Depth = 4824<LI>Call Chain = dispatch_cmd &rArr; pro_file_ack &rArr; protocol_send &rArr; b_tp_send_data &rArr; _b_tp_unpack_send &rArr; b_tp_port_send &rArr; uart_send_buf &rArr; HAL_UART_Transmit &rArr; UART_WaitOnFlagUntilTimeout
+</UL>
+<BR>[Calls]<UL><LI><a href="#[158]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;flash_write_buf
+<LI><a href="#[157]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;flash_erase_xsector
+<LI><a href="#[159]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;pro_file_ack
+<LI><a href="#[15a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;pro_algo_p_ack
+</UL>
+<BR>[Called By]<UL><LI><a href="#[a3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;protocol_cb
 </UL>
 
-<P><STRONG><a name="[1aa]"></a>prvInsertBlockIntoFreeList</STRONG> (Thumb, 72 bytes, Stack size 12 bytes, heap_4.o(i.prvInsertBlockIntoFreeList))
+<P><STRONG><a name="[1ab]"></a>prvHeapInit</STRONG> (Thumb, 66 bytes, Stack size 0 bytes, heap_4.o(i.prvHeapInit))
+<BR><BR>[Called By]<UL><LI><a href="#[19f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;pvPortMalloc
+</UL>
+
+<P><STRONG><a name="[1ac]"></a>prvInsertBlockIntoFreeList</STRONG> (Thumb, 72 bytes, Stack size 12 bytes, heap_4.o(i.prvInsertBlockIntoFreeList))
 <BR><BR>[Stack]<UL><LI>Max Depth = 12<LI>Call Chain = prvInsertBlockIntoFreeList
 </UL>
-<BR>[Called By]<UL><LI><a href="#[19b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;vPortFree
-<LI><a href="#[19c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;pvPortMalloc
+<BR>[Called By]<UL><LI><a href="#[19e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;vPortFree
+<LI><a href="#[19f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;pvPortMalloc
 </UL>
 
-<P><STRONG><a name="[179]"></a>flash_wait_write_end</STRONG> (Thumb, 68 bytes, Stack size 24 bytes, flash_drv.o(i.flash_wait_write_end))
+<P><STRONG><a name="[17d]"></a>flash_wait_write_end</STRONG> (Thumb, 68 bytes, Stack size 24 bytes, flash_drv.o(i.flash_wait_write_end))
 <BR><BR>[Stack]<UL><LI>Max Depth = 120<LI>Call Chain = flash_wait_write_end &rArr; f_spi_rw_byte &rArr; HAL_SPI_TransmitReceive &rArr; SPI_CheckFlag_BSY &rArr; SPI_WaitFlagStateUntilTimeout
 </UL>
 <BR>[Calls]<UL><LI><a href="#[123]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_GPIO_WritePin
 <LI><a href="#[f2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_Delay
-<LI><a href="#[174]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;f_spi_rw_byte
+<LI><a href="#[179]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;f_spi_rw_byte
 </UL>
-<BR>[Called By]<UL><LI><a href="#[17d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;flash_write_page
-<LI><a href="#[177]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;flash_erase_xsector
+<BR>[Called By]<UL><LI><a href="#[180]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;flash_write_page
+<LI><a href="#[157]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;flash_erase_xsector
 </UL>
 
-<P><STRONG><a name="[178]"></a>flash_write_enable</STRONG> (Thumb, 34 bytes, Stack size 8 bytes, flash_drv.o(i.flash_write_enable))
+<P><STRONG><a name="[17c]"></a>flash_write_enable</STRONG> (Thumb, 34 bytes, Stack size 8 bytes, flash_drv.o(i.flash_write_enable))
 <BR><BR>[Stack]<UL><LI>Max Depth = 104<LI>Call Chain = flash_write_enable &rArr; f_spi_rw_byte &rArr; HAL_SPI_TransmitReceive &rArr; SPI_CheckFlag_BSY &rArr; SPI_WaitFlagStateUntilTimeout
 </UL>
 <BR>[Calls]<UL><LI><a href="#[123]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_GPIO_WritePin
-<LI><a href="#[174]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;f_spi_rw_byte
+<LI><a href="#[179]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;f_spi_rw_byte
 </UL>
-<BR>[Called By]<UL><LI><a href="#[17d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;flash_write_page
-<LI><a href="#[177]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;flash_erase_xsector
+<BR>[Called By]<UL><LI><a href="#[180]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;flash_write_page
+<LI><a href="#[157]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;flash_erase_xsector
 </UL>
 
-<P><STRONG><a name="[17d]"></a>flash_write_page</STRONG> (Thumb, 94 bytes, Stack size 24 bytes, flash_drv.o(i.flash_write_page))
+<P><STRONG><a name="[180]"></a>flash_write_page</STRONG> (Thumb, 94 bytes, Stack size 24 bytes, flash_drv.o(i.flash_write_page))
 <BR><BR>[Stack]<UL><LI>Max Depth = 144<LI>Call Chain = flash_write_page &rArr; flash_wait_write_end &rArr; f_spi_rw_byte &rArr; HAL_SPI_TransmitReceive &rArr; SPI_CheckFlag_BSY &rArr; SPI_WaitFlagStateUntilTimeout
 </UL>
 <BR>[Calls]<UL><LI><a href="#[123]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_GPIO_WritePin
-<LI><a href="#[175]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;f_spi_write
-<LI><a href="#[174]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;f_spi_rw_byte
-<LI><a href="#[178]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;flash_write_enable
-<LI><a href="#[179]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;flash_wait_write_end
+<LI><a href="#[17a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;f_spi_write
+<LI><a href="#[179]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;f_spi_rw_byte
+<LI><a href="#[17c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;flash_write_enable
+<LI><a href="#[17d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;flash_wait_write_end
 </UL>
-<BR>[Called By]<UL><LI><a href="#[17c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;flash_write_buf
+<BR>[Called By]<UL><LI><a href="#[158]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;flash_write_buf
 </UL>
 
 <P><STRONG><a name="[13b]"></a>add_huff_table</STRONG> (Thumb, 90 bytes, Stack size 24 bytes, jcparam.o(i.add_huff_table))
@@ -2229,13 +2247,13 @@ Local Symbols
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> jcmaster.o(i.jinit_c_master_control)
 </UL>
-<P><STRONG><a name="[182]"></a>initial_setup</STRONG> (Thumb, 670 bytes, Stack size 32 bytes, jcmaster.o(i.initial_setup))
+<P><STRONG><a name="[185]"></a>initial_setup</STRONG> (Thumb, 670 bytes, Stack size 32 bytes, jcmaster.o(i.initial_setup))
 <BR><BR>[Stack]<UL><LI>Max Depth = 56<LI>Call Chain = initial_setup &rArr; jpeg_calc_jpeg_dimensions
 </UL>
-<BR>[Calls]<UL><LI><a href="#[184]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;jdiv_round_up
-<LI><a href="#[183]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;jpeg_calc_jpeg_dimensions
+<BR>[Calls]<UL><LI><a href="#[187]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;jdiv_round_up
+<LI><a href="#[186]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;jpeg_calc_jpeg_dimensions
 </UL>
-<BR>[Called By]<UL><LI><a href="#[187]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;jinit_c_master_control
+<BR>[Called By]<UL><LI><a href="#[18a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;jinit_c_master_control
 </UL>
 
 <P><STRONG><a name="[72]"></a>pass_startup</STRONG> (Thumb, 36 bytes, Stack size 8 bytes, jcmaster.o(i.pass_startup))
@@ -2243,10 +2261,10 @@ Local Symbols
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> jcmaster.o(i.jinit_c_master_control)
 </UL>
-<P><STRONG><a name="[1a5]"></a>per_scan_setup</STRONG> (Thumb, 308 bytes, Stack size 24 bytes, jcmaster.o(i.per_scan_setup))
+<P><STRONG><a name="[1a8]"></a>per_scan_setup</STRONG> (Thumb, 308 bytes, Stack size 24 bytes, jcmaster.o(i.per_scan_setup))
 <BR><BR>[Stack]<UL><LI>Max Depth = 24<LI>Call Chain = per_scan_setup
 </UL>
-<BR>[Calls]<UL><LI><a href="#[184]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;jdiv_round_up
+<BR>[Calls]<UL><LI><a href="#[187]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;jdiv_round_up
 </UL>
 <BR>[Called By]<UL><LI><a href="#[71]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;prepare_for_pass
 </UL>
@@ -2254,21 +2272,21 @@ Local Symbols
 <P><STRONG><a name="[71]"></a>prepare_for_pass</STRONG> (Thumb, 328 bytes, Stack size 16 bytes, jcmaster.o(i.prepare_for_pass))
 <BR><BR>[Stack]<UL><LI>Max Depth = 40<LI>Call Chain = prepare_for_pass &rArr; per_scan_setup
 </UL>
-<BR>[Calls]<UL><LI><a href="#[1a6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;select_scan_parameters
-<LI><a href="#[1a5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;per_scan_setup
+<BR>[Calls]<UL><LI><a href="#[1a9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;select_scan_parameters
+<LI><a href="#[1a8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;per_scan_setup
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> jcmaster.o(i.jinit_c_master_control)
 </UL>
-<P><STRONG><a name="[1a6]"></a>select_scan_parameters</STRONG> (Thumb, 198 bytes, Stack size 16 bytes, jcmaster.o(i.select_scan_parameters))
+<P><STRONG><a name="[1a9]"></a>select_scan_parameters</STRONG> (Thumb, 198 bytes, Stack size 16 bytes, jcmaster.o(i.select_scan_parameters))
 <BR><BR>[Stack]<UL><LI>Max Depth = 16<LI>Call Chain = select_scan_parameters
 </UL>
 <BR>[Called By]<UL><LI><a href="#[71]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;prepare_for_pass
 </UL>
 
-<P><STRONG><a name="[188]"></a>validate_script</STRONG> (Thumb, 708 bytes, Stack size 2680 bytes, jcmaster.o(i.validate_script))
+<P><STRONG><a name="[18b]"></a>validate_script</STRONG> (Thumb, 708 bytes, Stack size 2680 bytes, jcmaster.o(i.validate_script))
 <BR><BR>[Stack]<UL><LI>Max Depth = 2680<LI>Call Chain = validate_script
 </UL>
-<BR>[Called By]<UL><LI><a href="#[187]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;jinit_c_master_control
+<BR>[Called By]<UL><LI><a href="#[18a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;jinit_c_master_control
 </UL>
 
 <P><STRONG><a name="[d8]"></a>process_data_simple_main</STRONG> (Thumb, 140 bytes, Stack size 40 bytes, jcmainct.o(i.process_data_simple_main))
@@ -2284,13 +2302,13 @@ Local Symbols
 </UL>
 <BR>[Calls]<UL><LI><a href="#[155]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_memcpy4
 </UL>
-<BR>[Called By]<UL><LI><a href="#[189]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;jinit_c_prep_controller
+<BR>[Called By]<UL><LI><a href="#[18c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;jinit_c_prep_controller
 </UL>
 
-<P><STRONG><a name="[171]"></a>expand_bottom_edge</STRONG> (Thumb, 44 bytes, Stack size 40 bytes, jcprepct.o(i.expand_bottom_edge))
+<P><STRONG><a name="[176]"></a>expand_bottom_edge</STRONG> (Thumb, 44 bytes, Stack size 40 bytes, jcprepct.o(i.expand_bottom_edge))
 <BR><BR>[Stack]<UL><LI>Max Depth = 64<LI>Call Chain = expand_bottom_edge &rArr; jcopy_sample_rows
 </UL>
-<BR>[Calls]<UL><LI><a href="#[172]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;jcopy_sample_rows
+<BR>[Calls]<UL><LI><a href="#[177]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;jcopy_sample_rows
 </UL>
 <BR>[Called By]<UL><LI><a href="#[76]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;pre_process_data
 <LI><a href="#[75]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;pre_process_context
@@ -2299,15 +2317,15 @@ Local Symbols
 <P><STRONG><a name="[75]"></a>pre_process_context</STRONG> (Thumb, 312 bytes, Stack size 64 bytes, jcprepct.o(i.pre_process_context))
 <BR><BR>[Stack]<UL><LI>Max Depth = 128<LI>Call Chain = pre_process_context &rArr; expand_bottom_edge &rArr; jcopy_sample_rows
 </UL>
-<BR>[Calls]<UL><LI><a href="#[172]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;jcopy_sample_rows
-<LI><a href="#[171]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;expand_bottom_edge
+<BR>[Calls]<UL><LI><a href="#[177]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;jcopy_sample_rows
+<LI><a href="#[176]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;expand_bottom_edge
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> jcprepct.o(i.jinit_c_prep_controller)
 </UL>
 <P><STRONG><a name="[76]"></a>pre_process_data</STRONG> (Thumb, 270 bytes, Stack size 64 bytes, jcprepct.o(i.pre_process_data))
 <BR><BR>[Stack]<UL><LI>Max Depth = 128<LI>Call Chain = pre_process_data &rArr; expand_bottom_edge &rArr; jcopy_sample_rows
 </UL>
-<BR>[Calls]<UL><LI><a href="#[171]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;expand_bottom_edge
+<BR>[Calls]<UL><LI><a href="#[176]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;expand_bottom_edge
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> jcprepct.o(i.jinit_c_prep_controller)
 </UL>
@@ -2392,7 +2410,7 @@ Local Symbols
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> jccolor.o(i.jinit_color_converter)
 </UL>
-<P><STRONG><a name="[181]"></a>expand_right_edge</STRONG> (Thumb, 46 bytes, Stack size 20 bytes, jcsample.o(i.expand_right_edge))
+<P><STRONG><a name="[184]"></a>expand_right_edge</STRONG> (Thumb, 46 bytes, Stack size 20 bytes, jcsample.o(i.expand_right_edge))
 <BR><BR>[Stack]<UL><LI>Max Depth = 20<LI>Call Chain = expand_right_edge
 </UL>
 <BR>[Called By]<UL><LI><a href="#[86]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;int_downsample
@@ -2406,43 +2424,43 @@ Local Symbols
 <P><STRONG><a name="[82]"></a>fullsize_downsample</STRONG> (Thumb, 58 bytes, Stack size 32 bytes, jcsample.o(i.fullsize_downsample))
 <BR><BR>[Stack]<UL><LI>Max Depth = 56<LI>Call Chain = fullsize_downsample &rArr; jcopy_sample_rows
 </UL>
-<BR>[Calls]<UL><LI><a href="#[181]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;expand_right_edge
-<LI><a href="#[172]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;jcopy_sample_rows
+<BR>[Calls]<UL><LI><a href="#[184]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;expand_right_edge
+<LI><a href="#[177]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;jcopy_sample_rows
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> jcsample.o(i.jinit_downsampler)
 </UL>
 <P><STRONG><a name="[81]"></a>fullsize_smooth_downsample</STRONG> (Thumb, 240 bytes, Stack size 56 bytes, jcsample.o(i.fullsize_smooth_downsample))
 <BR><BR>[Stack]<UL><LI>Max Depth = 76<LI>Call Chain = fullsize_smooth_downsample &rArr; expand_right_edge
 </UL>
-<BR>[Calls]<UL><LI><a href="#[181]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;expand_right_edge
+<BR>[Calls]<UL><LI><a href="#[184]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;expand_right_edge
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> jcsample.o(i.jinit_downsampler)
 </UL>
 <P><STRONG><a name="[83]"></a>h2v1_downsample</STRONG> (Thumb, 96 bytes, Stack size 32 bytes, jcsample.o(i.h2v1_downsample))
 <BR><BR>[Stack]<UL><LI>Max Depth = 52<LI>Call Chain = h2v1_downsample &rArr; expand_right_edge
 </UL>
-<BR>[Calls]<UL><LI><a href="#[181]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;expand_right_edge
+<BR>[Calls]<UL><LI><a href="#[184]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;expand_right_edge
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> jcsample.o(i.jinit_downsampler)
 </UL>
 <P><STRONG><a name="[85]"></a>h2v2_downsample</STRONG> (Thumb, 118 bytes, Stack size 56 bytes, jcsample.o(i.h2v2_downsample))
 <BR><BR>[Stack]<UL><LI>Max Depth = 76<LI>Call Chain = h2v2_downsample &rArr; expand_right_edge
 </UL>
-<BR>[Calls]<UL><LI><a href="#[181]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;expand_right_edge
+<BR>[Calls]<UL><LI><a href="#[184]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;expand_right_edge
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> jcsample.o(i.jinit_downsampler)
 </UL>
 <P><STRONG><a name="[84]"></a>h2v2_smooth_downsample</STRONG> (Thumb, 448 bytes, Stack size 64 bytes, jcsample.o(i.h2v2_smooth_downsample))
 <BR><BR>[Stack]<UL><LI>Max Depth = 84<LI>Call Chain = h2v2_smooth_downsample &rArr; expand_right_edge
 </UL>
-<BR>[Calls]<UL><LI><a href="#[181]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;expand_right_edge
+<BR>[Calls]<UL><LI><a href="#[184]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;expand_right_edge
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> jcsample.o(i.jinit_downsampler)
 </UL>
 <P><STRONG><a name="[86]"></a>int_downsample</STRONG> (Thumb, 166 bytes, Stack size 64 bytes, jcsample.o(i.int_downsample))
 <BR><BR>[Stack]<UL><LI>Max Depth = 84<LI>Call Chain = int_downsample &rArr; expand_right_edge
 </UL>
-<BR>[Calls]<UL><LI><a href="#[181]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;expand_right_edge
+<BR>[Calls]<UL><LI><a href="#[184]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;expand_right_edge
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> jcsample.o(i.jinit_downsampler)
 </UL>
@@ -2474,83 +2492,83 @@ Local Symbols
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> jcdctmgr.o(i.jinit_forward_dct)
 </UL>
-<P><STRONG><a name="[15c]"></a>dump_buffer_e</STRONG> (Thumb, 40 bytes, Stack size 16 bytes, jchuff.o(i.dump_buffer_e))
+<P><STRONG><a name="[161]"></a>dump_buffer_e</STRONG> (Thumb, 40 bytes, Stack size 16 bytes, jchuff.o(i.dump_buffer_e))
 <BR><BR>[Stack]<UL><LI>Max Depth = 16<LI>Call Chain = dump_buffer_e
 </UL>
-<BR>[Called By]<UL><LI><a href="#[166]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;emit_restart_e
-<LI><a href="#[159]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;emit_bits_e
+<BR>[Called By]<UL><LI><a href="#[16b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;emit_restart_e
+<LI><a href="#[15e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;emit_bits_e
 </UL>
 
-<P><STRONG><a name="[15e]"></a>dump_buffer_s</STRONG> (Thumb, 28 bytes, Stack size 16 bytes, jchuff.o(i.dump_buffer_s))
+<P><STRONG><a name="[163]"></a>dump_buffer_s</STRONG> (Thumb, 28 bytes, Stack size 16 bytes, jchuff.o(i.dump_buffer_s))
 <BR><BR>[Stack]<UL><LI>Max Depth = 16<LI>Call Chain = dump_buffer_s
 </UL>
-<BR>[Called By]<UL><LI><a href="#[168]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;emit_restart_s
-<LI><a href="#[15d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;emit_bits_s
+<BR>[Called By]<UL><LI><a href="#[16d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;emit_restart_s
+<LI><a href="#[162]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;emit_bits_s
 </UL>
 
-<P><STRONG><a name="[158]"></a>emit_ac_symbol</STRONG> (Thumb, 40 bytes, Stack size 0 bytes, jchuff.o(i.emit_ac_symbol))
+<P><STRONG><a name="[15d]"></a>emit_ac_symbol</STRONG> (Thumb, 40 bytes, Stack size 0 bytes, jchuff.o(i.emit_ac_symbol))
 <BR><BR>[Stack]<UL><LI>Max Depth = 40<LI>Call Chain = emit_ac_symbol &rArr; emit_bits_e &rArr; dump_buffer_e
 </UL>
-<BR>[Calls]<UL><LI><a href="#[159]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;emit_bits_e
+<BR>[Calls]<UL><LI><a href="#[15e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;emit_bits_e
 </UL>
 <BR>[Called By]<UL><LI><a href="#[d2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;encode_mcu_AC_refine
 <LI><a href="#[d3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;encode_mcu_AC_first
-<LI><a href="#[163]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;emit_eobrun
+<LI><a href="#[168]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;emit_eobrun
 </UL>
 
-<P><STRONG><a name="[159]"></a>emit_bits_e</STRONG> (Thumb, 130 bytes, Stack size 24 bytes, jchuff.o(i.emit_bits_e))
+<P><STRONG><a name="[15e]"></a>emit_bits_e</STRONG> (Thumb, 130 bytes, Stack size 24 bytes, jchuff.o(i.emit_bits_e))
 <BR><BR>[Stack]<UL><LI>Max Depth = 40<LI>Call Chain = emit_bits_e &rArr; dump_buffer_e
 </UL>
-<BR>[Calls]<UL><LI><a href="#[15c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;dump_buffer_e
+<BR>[Calls]<UL><LI><a href="#[161]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;dump_buffer_e
 </UL>
-<BR>[Called By]<UL><LI><a href="#[167]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;flush_bits_e
+<BR>[Called By]<UL><LI><a href="#[16c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;flush_bits_e
 <LI><a href="#[d5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;encode_mcu_DC_refine
 <LI><a href="#[d4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;encode_mcu_DC_first
 <LI><a href="#[d2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;encode_mcu_AC_refine
 <LI><a href="#[d3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;encode_mcu_AC_first
-<LI><a href="#[163]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;emit_eobrun
-<LI><a href="#[15f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;emit_buffered_bits
-<LI><a href="#[158]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;emit_ac_symbol
+<LI><a href="#[168]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;emit_eobrun
+<LI><a href="#[164]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;emit_buffered_bits
+<LI><a href="#[15d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;emit_ac_symbol
 </UL>
 
-<P><STRONG><a name="[15d]"></a>emit_bits_s</STRONG> (Thumb, 132 bytes, Stack size 24 bytes, jchuff.o(i.emit_bits_s))
+<P><STRONG><a name="[162]"></a>emit_bits_s</STRONG> (Thumb, 132 bytes, Stack size 24 bytes, jchuff.o(i.emit_bits_s))
 <BR><BR>[Stack]<UL><LI>Max Depth = 40<LI>Call Chain = emit_bits_s &rArr; dump_buffer_s
 </UL>
-<BR>[Calls]<UL><LI><a href="#[15e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;dump_buffer_s
+<BR>[Calls]<UL><LI><a href="#[163]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;dump_buffer_s
 </UL>
-<BR>[Called By]<UL><LI><a href="#[169]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;flush_bits_s
-<LI><a href="#[16f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;encode_one_block
+<BR>[Called By]<UL><LI><a href="#[16e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;flush_bits_s
+<LI><a href="#[174]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;encode_one_block
 </UL>
 
-<P><STRONG><a name="[15f]"></a>emit_buffered_bits</STRONG> (Thumb, 36 bytes, Stack size 16 bytes, jchuff.o(i.emit_buffered_bits))
+<P><STRONG><a name="[164]"></a>emit_buffered_bits</STRONG> (Thumb, 36 bytes, Stack size 16 bytes, jchuff.o(i.emit_buffered_bits))
 <BR><BR>[Stack]<UL><LI>Max Depth = 56<LI>Call Chain = emit_buffered_bits &rArr; emit_bits_e &rArr; dump_buffer_e
 </UL>
-<BR>[Calls]<UL><LI><a href="#[159]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;emit_bits_e
+<BR>[Calls]<UL><LI><a href="#[15e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;emit_bits_e
 </UL>
 <BR>[Called By]<UL><LI><a href="#[d2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;encode_mcu_AC_refine
-<LI><a href="#[163]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;emit_eobrun
+<LI><a href="#[168]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;emit_eobrun
 </UL>
 
-<P><STRONG><a name="[163]"></a>emit_eobrun</STRONG> (Thumb, 88 bytes, Stack size 16 bytes, jchuff.o(i.emit_eobrun))
+<P><STRONG><a name="[168]"></a>emit_eobrun</STRONG> (Thumb, 88 bytes, Stack size 16 bytes, jchuff.o(i.emit_eobrun))
 <BR><BR>[Stack]<UL><LI>Max Depth = 72<LI>Call Chain = emit_eobrun &rArr; emit_buffered_bits &rArr; emit_bits_e &rArr; dump_buffer_e
 </UL>
-<BR>[Calls]<UL><LI><a href="#[15f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;emit_buffered_bits
-<LI><a href="#[159]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;emit_bits_e
-<LI><a href="#[158]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;emit_ac_symbol
+<BR>[Calls]<UL><LI><a href="#[164]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;emit_buffered_bits
+<LI><a href="#[15e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;emit_bits_e
+<LI><a href="#[15d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;emit_ac_symbol
 </UL>
 <BR>[Called By]<UL><LI><a href="#[d1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;finish_pass_huff
 <LI><a href="#[d0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;finish_pass_gather
 <LI><a href="#[d2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;encode_mcu_AC_refine
 <LI><a href="#[d3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;encode_mcu_AC_first
-<LI><a href="#[166]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;emit_restart_e
+<LI><a href="#[16b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;emit_restart_e
 </UL>
 
-<P><STRONG><a name="[166]"></a>emit_restart_e</STRONG> (Thumb, 108 bytes, Stack size 16 bytes, jchuff.o(i.emit_restart_e))
+<P><STRONG><a name="[16b]"></a>emit_restart_e</STRONG> (Thumb, 108 bytes, Stack size 16 bytes, jchuff.o(i.emit_restart_e))
 <BR><BR>[Stack]<UL><LI>Max Depth = 88<LI>Call Chain = emit_restart_e &rArr; emit_eobrun &rArr; emit_buffered_bits &rArr; emit_bits_e &rArr; dump_buffer_e
 </UL>
-<BR>[Calls]<UL><LI><a href="#[167]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;flush_bits_e
-<LI><a href="#[163]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;emit_eobrun
-<LI><a href="#[15c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;dump_buffer_e
+<BR>[Calls]<UL><LI><a href="#[16c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;flush_bits_e
+<LI><a href="#[168]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;emit_eobrun
+<LI><a href="#[161]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;dump_buffer_e
 </UL>
 <BR>[Called By]<UL><LI><a href="#[d5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;encode_mcu_DC_refine
 <LI><a href="#[d4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;encode_mcu_DC_first
@@ -2558,11 +2576,11 @@ Local Symbols
 <LI><a href="#[d3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;encode_mcu_AC_first
 </UL>
 
-<P><STRONG><a name="[168]"></a>emit_restart_s</STRONG> (Thumb, 98 bytes, Stack size 16 bytes, jchuff.o(i.emit_restart_s))
+<P><STRONG><a name="[16d]"></a>emit_restart_s</STRONG> (Thumb, 98 bytes, Stack size 16 bytes, jchuff.o(i.emit_restart_s))
 <BR><BR>[Stack]<UL><LI>Max Depth = 64<LI>Call Chain = emit_restart_s &rArr; flush_bits_s &rArr; emit_bits_s &rArr; dump_buffer_s
 </UL>
-<BR>[Calls]<UL><LI><a href="#[169]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;flush_bits_s
-<LI><a href="#[15e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;dump_buffer_s
+<BR>[Calls]<UL><LI><a href="#[16e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;flush_bits_s
+<LI><a href="#[163]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;dump_buffer_s
 </UL>
 <BR>[Called By]<UL><LI><a href="#[d7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;encode_mcu_huff
 </UL>
@@ -2570,60 +2588,60 @@ Local Symbols
 <P><STRONG><a name="[d3]"></a>encode_mcu_AC_first</STRONG> (Thumb, 292 bytes, Stack size 48 bytes, jchuff.o(i.encode_mcu_AC_first))
 <BR><BR>[Stack]<UL><LI>Max Depth = 136<LI>Call Chain = encode_mcu_AC_first &rArr; emit_restart_e &rArr; emit_eobrun &rArr; emit_buffered_bits &rArr; emit_bits_e &rArr; dump_buffer_e
 </UL>
-<BR>[Calls]<UL><LI><a href="#[166]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;emit_restart_e
-<LI><a href="#[163]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;emit_eobrun
-<LI><a href="#[159]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;emit_bits_e
-<LI><a href="#[158]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;emit_ac_symbol
+<BR>[Calls]<UL><LI><a href="#[16b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;emit_restart_e
+<LI><a href="#[168]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;emit_eobrun
+<LI><a href="#[15e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;emit_bits_e
+<LI><a href="#[15d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;emit_ac_symbol
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> jchuff.o(i.start_pass_huff)
 </UL>
 <P><STRONG><a name="[d2]"></a>encode_mcu_AC_refine</STRONG> (Thumb, 380 bytes, Stack size 336 bytes, jchuff.o(i.encode_mcu_AC_refine))
 <BR><BR>[Stack]<UL><LI>Max Depth = 424<LI>Call Chain = encode_mcu_AC_refine &rArr; emit_restart_e &rArr; emit_eobrun &rArr; emit_buffered_bits &rArr; emit_bits_e &rArr; dump_buffer_e
 </UL>
-<BR>[Calls]<UL><LI><a href="#[166]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;emit_restart_e
-<LI><a href="#[163]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;emit_eobrun
-<LI><a href="#[15f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;emit_buffered_bits
-<LI><a href="#[159]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;emit_bits_e
-<LI><a href="#[158]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;emit_ac_symbol
+<BR>[Calls]<UL><LI><a href="#[16b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;emit_restart_e
+<LI><a href="#[168]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;emit_eobrun
+<LI><a href="#[164]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;emit_buffered_bits
+<LI><a href="#[15e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;emit_bits_e
+<LI><a href="#[15d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;emit_ac_symbol
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> jchuff.o(i.start_pass_huff)
 </UL>
 <P><STRONG><a name="[d4]"></a>encode_mcu_DC_first</STRONG> (Thumb, 250 bytes, Stack size 40 bytes, jchuff.o(i.encode_mcu_DC_first))
 <BR><BR>[Stack]<UL><LI>Max Depth = 128<LI>Call Chain = encode_mcu_DC_first &rArr; emit_restart_e &rArr; emit_eobrun &rArr; emit_buffered_bits &rArr; emit_bits_e &rArr; dump_buffer_e
 </UL>
-<BR>[Calls]<UL><LI><a href="#[166]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;emit_restart_e
-<LI><a href="#[159]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;emit_bits_e
+<BR>[Calls]<UL><LI><a href="#[16b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;emit_restart_e
+<LI><a href="#[15e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;emit_bits_e
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> jchuff.o(i.start_pass_huff)
 </UL>
 <P><STRONG><a name="[d5]"></a>encode_mcu_DC_refine</STRONG> (Thumb, 128 bytes, Stack size 24 bytes, jchuff.o(i.encode_mcu_DC_refine))
 <BR><BR>[Stack]<UL><LI>Max Depth = 112<LI>Call Chain = encode_mcu_DC_refine &rArr; emit_restart_e &rArr; emit_eobrun &rArr; emit_buffered_bits &rArr; emit_bits_e &rArr; dump_buffer_e
 </UL>
-<BR>[Calls]<UL><LI><a href="#[166]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;emit_restart_e
-<LI><a href="#[159]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;emit_bits_e
+<BR>[Calls]<UL><LI><a href="#[16b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;emit_restart_e
+<LI><a href="#[15e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;emit_bits_e
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> jchuff.o(i.start_pass_huff)
 </UL>
 <P><STRONG><a name="[d6]"></a>encode_mcu_gather</STRONG> (Thumb, 140 bytes, Stack size 32 bytes, jchuff.o(i.encode_mcu_gather))
 <BR><BR>[Stack]<UL><LI>Max Depth = 72<LI>Call Chain = encode_mcu_gather &rArr; htest_one_block
 </UL>
-<BR>[Calls]<UL><LI><a href="#[16e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;htest_one_block
+<BR>[Calls]<UL><LI><a href="#[173]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;htest_one_block
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> jchuff.o(i.start_pass_huff)
 </UL>
 <P><STRONG><a name="[d7]"></a>encode_mcu_huff</STRONG> (Thumb, 214 bytes, Stack size 80 bytes, jchuff.o(i.encode_mcu_huff))
 <BR><BR>[Stack]<UL><LI>Max Depth = 168<LI>Call Chain = encode_mcu_huff &rArr; encode_one_block &rArr; emit_bits_s &rArr; dump_buffer_s
 </UL>
-<BR>[Calls]<UL><LI><a href="#[16f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;encode_one_block
-<LI><a href="#[168]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;emit_restart_s
+<BR>[Calls]<UL><LI><a href="#[174]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;encode_one_block
+<LI><a href="#[16d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;emit_restart_s
 <LI><a href="#[155]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_memcpy4
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> jchuff.o(i.start_pass_huff)
 </UL>
-<P><STRONG><a name="[16f]"></a>encode_one_block</STRONG> (Thumb, 280 bytes, Stack size 48 bytes, jchuff.o(i.encode_one_block))
+<P><STRONG><a name="[174]"></a>encode_one_block</STRONG> (Thumb, 280 bytes, Stack size 48 bytes, jchuff.o(i.encode_one_block))
 <BR><BR>[Stack]<UL><LI>Max Depth = 88<LI>Call Chain = encode_one_block &rArr; emit_bits_s &rArr; dump_buffer_s
 </UL>
-<BR>[Calls]<UL><LI><a href="#[15d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;emit_bits_s
+<BR>[Calls]<UL><LI><a href="#[162]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;emit_bits_s
 </UL>
 <BR>[Called By]<UL><LI><a href="#[d7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;encode_mcu_huff
 </UL>
@@ -2632,58 +2650,58 @@ Local Symbols
 <BR><BR>[Stack]<UL><LI>Max Depth = 2216<LI>Call Chain = finish_pass_gather &rArr; jpeg_gen_optimal_table
 </UL>
 <BR>[Calls]<UL><LI><a href="#[13c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;jpeg_alloc_huff_table
-<LI><a href="#[176]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;jpeg_gen_optimal_table
-<LI><a href="#[163]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;emit_eobrun
+<LI><a href="#[17b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;jpeg_gen_optimal_table
+<LI><a href="#[168]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;emit_eobrun
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> jchuff.o(i.start_pass_huff)
 </UL>
 <P><STRONG><a name="[d1]"></a>finish_pass_huff</STRONG> (Thumb, 130 bytes, Stack size 56 bytes, jchuff.o(i.finish_pass_huff))
 <BR><BR>[Stack]<UL><LI>Max Depth = 128<LI>Call Chain = finish_pass_huff &rArr; emit_eobrun &rArr; emit_buffered_bits &rArr; emit_bits_e &rArr; dump_buffer_e
 </UL>
-<BR>[Calls]<UL><LI><a href="#[169]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;flush_bits_s
-<LI><a href="#[167]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;flush_bits_e
-<LI><a href="#[163]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;emit_eobrun
+<BR>[Calls]<UL><LI><a href="#[16e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;flush_bits_s
+<LI><a href="#[16c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;flush_bits_e
+<LI><a href="#[168]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;emit_eobrun
 <LI><a href="#[155]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_memcpy4
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> jchuff.o(i.start_pass_huff)
 </UL>
-<P><STRONG><a name="[167]"></a>flush_bits_e</STRONG> (Thumb, 20 bytes, Stack size 8 bytes, jchuff.o(i.flush_bits_e))
+<P><STRONG><a name="[16c]"></a>flush_bits_e</STRONG> (Thumb, 20 bytes, Stack size 8 bytes, jchuff.o(i.flush_bits_e))
 <BR><BR>[Stack]<UL><LI>Max Depth = 48<LI>Call Chain = flush_bits_e &rArr; emit_bits_e &rArr; dump_buffer_e
 </UL>
-<BR>[Calls]<UL><LI><a href="#[159]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;emit_bits_e
+<BR>[Calls]<UL><LI><a href="#[15e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;emit_bits_e
 </UL>
 <BR>[Called By]<UL><LI><a href="#[d1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;finish_pass_huff
-<LI><a href="#[166]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;emit_restart_e
+<LI><a href="#[16b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;emit_restart_e
 </UL>
 
-<P><STRONG><a name="[169]"></a>flush_bits_s</STRONG> (Thumb, 26 bytes, Stack size 8 bytes, jchuff.o(i.flush_bits_s))
+<P><STRONG><a name="[16e]"></a>flush_bits_s</STRONG> (Thumb, 26 bytes, Stack size 8 bytes, jchuff.o(i.flush_bits_s))
 <BR><BR>[Stack]<UL><LI>Max Depth = 48<LI>Call Chain = flush_bits_s &rArr; emit_bits_s &rArr; dump_buffer_s
 </UL>
-<BR>[Calls]<UL><LI><a href="#[15d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;emit_bits_s
+<BR>[Calls]<UL><LI><a href="#[162]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;emit_bits_s
 </UL>
 <BR>[Called By]<UL><LI><a href="#[d1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;finish_pass_huff
-<LI><a href="#[168]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;emit_restart_s
+<LI><a href="#[16d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;emit_restart_s
 </UL>
 
-<P><STRONG><a name="[16e]"></a>htest_one_block</STRONG> (Thumb, 186 bytes, Stack size 40 bytes, jchuff.o(i.htest_one_block))
+<P><STRONG><a name="[173]"></a>htest_one_block</STRONG> (Thumb, 186 bytes, Stack size 40 bytes, jchuff.o(i.htest_one_block))
 <BR><BR>[Stack]<UL><LI>Max Depth = 40<LI>Call Chain = htest_one_block
 </UL>
 <BR>[Called By]<UL><LI><a href="#[d6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;encode_mcu_gather
 </UL>
 
-<P><STRONG><a name="[176]"></a>jpeg_gen_optimal_table</STRONG> (Thumb, 404 bytes, Stack size 2144 bytes, jchuff.o(i.jpeg_gen_optimal_table))
+<P><STRONG><a name="[17b]"></a>jpeg_gen_optimal_table</STRONG> (Thumb, 404 bytes, Stack size 2144 bytes, jchuff.o(i.jpeg_gen_optimal_table))
 <BR><BR>[Stack]<UL><LI>Max Depth = 2144<LI>Call Chain = jpeg_gen_optimal_table
 </UL>
-<BR>[Calls]<UL><LI><a href="#[195]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_memclr4
+<BR>[Calls]<UL><LI><a href="#[198]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_memclr4
 <LI><a href="#[155]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_memcpy4
 </UL>
 <BR>[Called By]<UL><LI><a href="#[d0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;finish_pass_gather
 </UL>
 
-<P><STRONG><a name="[19d]"></a>jpeg_make_c_derived_tbl</STRONG> (Thumb, 332 bytes, Stack size 1368 bytes, jchuff.o(i.jpeg_make_c_derived_tbl))
+<P><STRONG><a name="[1a0]"></a>jpeg_make_c_derived_tbl</STRONG> (Thumb, 332 bytes, Stack size 1368 bytes, jchuff.o(i.jpeg_make_c_derived_tbl))
 <BR><BR>[Stack]<UL><LI>Max Depth = 1368<LI>Call Chain = jpeg_make_c_derived_tbl
 </UL>
-<BR>[Calls]<UL><LI><a href="#[195]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_memclr4
+<BR>[Calls]<UL><LI><a href="#[198]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_memclr4
 </UL>
 <BR>[Called By]<UL><LI><a href="#[88]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;start_pass_huff
 </UL>
@@ -2691,8 +2709,8 @@ Local Symbols
 <P><STRONG><a name="[88]"></a>start_pass_huff</STRONG> (Thumb, 378 bytes, Stack size 40 bytes, jchuff.o(i.start_pass_huff))
 <BR><BR>[Stack]<UL><LI>Max Depth = 1408<LI>Call Chain = start_pass_huff &rArr; jpeg_make_c_derived_tbl
 </UL>
-<BR>[Calls]<UL><LI><a href="#[19d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;jpeg_make_c_derived_tbl
-<LI><a href="#[195]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_memclr4
+<BR>[Calls]<UL><LI><a href="#[1a0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;jpeg_make_c_derived_tbl
+<LI><a href="#[198]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_memclr4
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> jchuff.o(i.jinit_huff_encoder)
 </UL>
@@ -2712,11 +2730,11 @@ Local Symbols
 <BR><BR>[Stack]<UL><LI>Max Depth = 8<LI>Call Chain = emit_byte
 </UL>
 <BR>[Called By]<UL><LI><a href="#[6e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;finish_pass
-<LI><a href="#[165]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;emit_restart
+<LI><a href="#[16a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;emit_restart
 <LI><a href="#[140]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;arith_encode
 </UL>
 
-<P><STRONG><a name="[165]"></a>emit_restart</STRONG> (Thumb, 148 bytes, Stack size 24 bytes, jcarith.o(i.emit_restart))
+<P><STRONG><a name="[16a]"></a>emit_restart</STRONG> (Thumb, 148 bytes, Stack size 24 bytes, jcarith.o(i.emit_restart))
 <BR><BR>[Stack]<UL><LI>Max Depth = 48<LI>Call Chain = emit_restart &rArr; finish_pass &rArr; emit_byte
 </UL>
 <BR>[Calls]<UL><LI><a href="#[6e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;finish_pass
@@ -2733,7 +2751,7 @@ Local Symbols
 <P><STRONG><a name="[a8]"></a>encode_mcu</STRONG> (Thumb, 678 bytes, Stack size 64 bytes, jcarith.o(i.encode_mcu))
 <BR><BR>[Stack]<UL><LI>Max Depth = 112<LI>Call Chain = encode_mcu &rArr; emit_restart &rArr; finish_pass &rArr; emit_byte
 </UL>
-<BR>[Calls]<UL><LI><a href="#[165]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;emit_restart
+<BR>[Calls]<UL><LI><a href="#[16a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;emit_restart
 <LI><a href="#[140]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;arith_encode
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> jcarith.o(i.start_pass)
@@ -2741,7 +2759,7 @@ Local Symbols
 <P><STRONG><a name="[a5]"></a>encode_mcu_AC_first</STRONG> (Thumb, 430 bytes, Stack size 56 bytes, jcarith.o(i.encode_mcu_AC_first))
 <BR><BR>[Stack]<UL><LI>Max Depth = 104<LI>Call Chain = encode_mcu_AC_first &rArr; emit_restart &rArr; finish_pass &rArr; emit_byte
 </UL>
-<BR>[Calls]<UL><LI><a href="#[165]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;emit_restart
+<BR>[Calls]<UL><LI><a href="#[16a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;emit_restart
 <LI><a href="#[140]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;arith_encode
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> jcarith.o(i.start_pass)
@@ -2749,7 +2767,7 @@ Local Symbols
 <P><STRONG><a name="[a4]"></a>encode_mcu_AC_refine</STRONG> (Thumb, 334 bytes, Stack size 40 bytes, jcarith.o(i.encode_mcu_AC_refine))
 <BR><BR>[Stack]<UL><LI>Max Depth = 88<LI>Call Chain = encode_mcu_AC_refine &rArr; emit_restart &rArr; finish_pass &rArr; emit_byte
 </UL>
-<BR>[Calls]<UL><LI><a href="#[165]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;emit_restart
+<BR>[Calls]<UL><LI><a href="#[16a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;emit_restart
 <LI><a href="#[140]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;arith_encode
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> jcarith.o(i.start_pass)
@@ -2757,7 +2775,7 @@ Local Symbols
 <P><STRONG><a name="[a6]"></a>encode_mcu_DC_first</STRONG> (Thumb, 368 bytes, Stack size 56 bytes, jcarith.o(i.encode_mcu_DC_first))
 <BR><BR>[Stack]<UL><LI>Max Depth = 104<LI>Call Chain = encode_mcu_DC_first &rArr; emit_restart &rArr; finish_pass &rArr; emit_byte
 </UL>
-<BR>[Calls]<UL><LI><a href="#[165]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;emit_restart
+<BR>[Calls]<UL><LI><a href="#[16a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;emit_restart
 <LI><a href="#[140]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;arith_encode
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> jcarith.o(i.start_pass)
@@ -2765,7 +2783,7 @@ Local Symbols
 <P><STRONG><a name="[a7]"></a>encode_mcu_DC_refine</STRONG> (Thumb, 102 bytes, Stack size 24 bytes, jcarith.o(i.encode_mcu_DC_refine))
 <BR><BR>[Stack]<UL><LI>Max Depth = 72<LI>Call Chain = encode_mcu_DC_refine &rArr; emit_restart &rArr; finish_pass &rArr; emit_byte
 </UL>
-<BR>[Calls]<UL><LI><a href="#[165]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;emit_restart
+<BR>[Calls]<UL><LI><a href="#[16a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;emit_restart
 <LI><a href="#[140]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;arith_encode
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> jcarith.o(i.start_pass)
@@ -2775,7 +2793,7 @@ Local Symbols
 </UL>
 <BR>[Calls]<UL><LI><a href="#[141]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;emit_byte
 </UL>
-<BR>[Called By]<UL><LI><a href="#[165]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;emit_restart
+<BR>[Called By]<UL><LI><a href="#[16a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;emit_restart
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> jcarith.o(i.jinit_arith_encoder)
 </UL>
@@ -2786,95 +2804,95 @@ Local Symbols
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> jcarith.o(i.jinit_arith_encoder)
 </UL>
-<P><STRONG><a name="[156]"></a>emit_2bytes</STRONG> (Thumb, 26 bytes, Stack size 16 bytes, jcmarker.o(i.emit_2bytes))
+<P><STRONG><a name="[15b]"></a>emit_2bytes</STRONG> (Thumb, 26 bytes, Stack size 16 bytes, jcmarker.o(i.emit_2bytes))
 <BR><BR>[Stack]<UL><LI>Max Depth = 24<LI>Call Chain = emit_2bytes &rArr; emit_byte
 </UL>
-<BR>[Calls]<UL><LI><a href="#[157]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;emit_byte
+<BR>[Calls]<UL><LI><a href="#[15c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;emit_byte
 </UL>
 <BR>[Called By]<UL><LI><a href="#[8b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;write_scan_header
 <LI><a href="#[8e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;write_marker_header
 <LI><a href="#[8a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;write_frame_header
-<LI><a href="#[16b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;emit_sos
-<LI><a href="#[16a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;emit_sof
-<LI><a href="#[164]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;emit_jfif_app0
-<LI><a href="#[162]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;emit_dqt
-<LI><a href="#[161]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;emit_dht
-<LI><a href="#[160]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;emit_dac
-<LI><a href="#[15a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;emit_adobe_app14
+<LI><a href="#[170]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;emit_sos
+<LI><a href="#[16f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;emit_sof
+<LI><a href="#[169]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;emit_jfif_app0
+<LI><a href="#[167]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;emit_dqt
+<LI><a href="#[166]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;emit_dht
+<LI><a href="#[165]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;emit_dac
+<LI><a href="#[15f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;emit_adobe_app14
 </UL>
 
-<P><STRONG><a name="[15a]"></a>emit_adobe_app14</STRONG> (Thumb, 114 bytes, Stack size 8 bytes, jcmarker.o(i.emit_adobe_app14))
+<P><STRONG><a name="[15f]"></a>emit_adobe_app14</STRONG> (Thumb, 114 bytes, Stack size 8 bytes, jcmarker.o(i.emit_adobe_app14))
 <BR><BR>[Stack]<UL><LI>Max Depth = 32<LI>Call Chain = emit_adobe_app14 &rArr; emit_marker &rArr; emit_byte
 </UL>
-<BR>[Calls]<UL><LI><a href="#[15b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;emit_marker
-<LI><a href="#[157]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;emit_byte
-<LI><a href="#[156]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;emit_2bytes
+<BR>[Calls]<UL><LI><a href="#[160]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;emit_marker
+<LI><a href="#[15c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;emit_byte
+<LI><a href="#[15b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;emit_2bytes
 </UL>
 <BR>[Called By]<UL><LI><a href="#[89]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;write_file_header
 </UL>
 
-<P><STRONG><a name="[157]"></a>emit_byte</STRONG> (Thumb, 52 bytes, Stack size 8 bytes, jcmarker.o(i.emit_byte))
+<P><STRONG><a name="[15c]"></a>emit_byte</STRONG> (Thumb, 52 bytes, Stack size 8 bytes, jcmarker.o(i.emit_byte))
 <BR><BR>[Stack]<UL><LI>Max Depth = 8<LI>Call Chain = emit_byte
 </UL>
 <BR>[Called By]<UL><LI><a href="#[8f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;write_marker_byte
 <LI><a href="#[8a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;write_frame_header
-<LI><a href="#[16b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;emit_sos
-<LI><a href="#[16a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;emit_sof
-<LI><a href="#[15b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;emit_marker
-<LI><a href="#[164]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;emit_jfif_app0
-<LI><a href="#[162]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;emit_dqt
-<LI><a href="#[161]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;emit_dht
-<LI><a href="#[160]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;emit_dac
-<LI><a href="#[15a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;emit_adobe_app14
-<LI><a href="#[156]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;emit_2bytes
+<LI><a href="#[170]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;emit_sos
+<LI><a href="#[16f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;emit_sof
+<LI><a href="#[160]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;emit_marker
+<LI><a href="#[169]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;emit_jfif_app0
+<LI><a href="#[167]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;emit_dqt
+<LI><a href="#[166]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;emit_dht
+<LI><a href="#[165]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;emit_dac
+<LI><a href="#[15f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;emit_adobe_app14
+<LI><a href="#[15b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;emit_2bytes
 </UL>
 
-<P><STRONG><a name="[160]"></a>emit_dac</STRONG> (Thumb, 186 bytes, Stack size 56 bytes, jcmarker.o(i.emit_dac))
+<P><STRONG><a name="[165]"></a>emit_dac</STRONG> (Thumb, 186 bytes, Stack size 56 bytes, jcmarker.o(i.emit_dac))
 <BR><BR>[Stack]<UL><LI>Max Depth = 80<LI>Call Chain = emit_dac &rArr; emit_marker &rArr; emit_byte
 </UL>
-<BR>[Calls]<UL><LI><a href="#[15b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;emit_marker
-<LI><a href="#[157]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;emit_byte
-<LI><a href="#[156]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;emit_2bytes
+<BR>[Calls]<UL><LI><a href="#[160]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;emit_marker
+<LI><a href="#[15c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;emit_byte
+<LI><a href="#[15b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;emit_2bytes
 </UL>
 <BR>[Called By]<UL><LI><a href="#[8b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;write_scan_header
 </UL>
 
-<P><STRONG><a name="[161]"></a>emit_dht</STRONG> (Thumb, 138 bytes, Stack size 24 bytes, jcmarker.o(i.emit_dht))
+<P><STRONG><a name="[166]"></a>emit_dht</STRONG> (Thumb, 138 bytes, Stack size 24 bytes, jcmarker.o(i.emit_dht))
 <BR><BR>[Stack]<UL><LI>Max Depth = 48<LI>Call Chain = emit_dht &rArr; emit_marker &rArr; emit_byte
 </UL>
-<BR>[Calls]<UL><LI><a href="#[15b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;emit_marker
-<LI><a href="#[157]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;emit_byte
-<LI><a href="#[156]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;emit_2bytes
+<BR>[Calls]<UL><LI><a href="#[160]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;emit_marker
+<LI><a href="#[15c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;emit_byte
+<LI><a href="#[15b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;emit_2bytes
 </UL>
 <BR>[Called By]<UL><LI><a href="#[8d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;write_tables_only
 <LI><a href="#[8b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;write_scan_header
 </UL>
 
-<P><STRONG><a name="[162]"></a>emit_dqt</STRONG> (Thumb, 176 bytes, Stack size 24 bytes, jcmarker.o(i.emit_dqt))
+<P><STRONG><a name="[167]"></a>emit_dqt</STRONG> (Thumb, 176 bytes, Stack size 24 bytes, jcmarker.o(i.emit_dqt))
 <BR><BR>[Stack]<UL><LI>Max Depth = 48<LI>Call Chain = emit_dqt &rArr; emit_marker &rArr; emit_byte
 </UL>
-<BR>[Calls]<UL><LI><a href="#[15b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;emit_marker
-<LI><a href="#[157]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;emit_byte
-<LI><a href="#[156]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;emit_2bytes
+<BR>[Calls]<UL><LI><a href="#[160]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;emit_marker
+<LI><a href="#[15c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;emit_byte
+<LI><a href="#[15b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;emit_2bytes
 </UL>
 <BR>[Called By]<UL><LI><a href="#[8d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;write_tables_only
 <LI><a href="#[8a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;write_frame_header
 </UL>
 
-<P><STRONG><a name="[164]"></a>emit_jfif_app0</STRONG> (Thumb, 128 bytes, Stack size 8 bytes, jcmarker.o(i.emit_jfif_app0))
+<P><STRONG><a name="[169]"></a>emit_jfif_app0</STRONG> (Thumb, 128 bytes, Stack size 8 bytes, jcmarker.o(i.emit_jfif_app0))
 <BR><BR>[Stack]<UL><LI>Max Depth = 32<LI>Call Chain = emit_jfif_app0 &rArr; emit_marker &rArr; emit_byte
 </UL>
-<BR>[Calls]<UL><LI><a href="#[15b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;emit_marker
-<LI><a href="#[157]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;emit_byte
-<LI><a href="#[156]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;emit_2bytes
+<BR>[Calls]<UL><LI><a href="#[160]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;emit_marker
+<LI><a href="#[15c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;emit_byte
+<LI><a href="#[15b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;emit_2bytes
 </UL>
 <BR>[Called By]<UL><LI><a href="#[89]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;write_file_header
 </UL>
 
-<P><STRONG><a name="[15b]"></a>emit_marker</STRONG> (Thumb, 24 bytes, Stack size 16 bytes, jcmarker.o(i.emit_marker))
+<P><STRONG><a name="[160]"></a>emit_marker</STRONG> (Thumb, 24 bytes, Stack size 16 bytes, jcmarker.o(i.emit_marker))
 <BR><BR>[Stack]<UL><LI>Max Depth = 24<LI>Call Chain = emit_marker &rArr; emit_byte
 </UL>
-<BR>[Calls]<UL><LI><a href="#[157]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;emit_byte
+<BR>[Calls]<UL><LI><a href="#[15c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;emit_byte
 </UL>
 <BR>[Called By]<UL><LI><a href="#[8d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;write_tables_only
 <LI><a href="#[8b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;write_scan_header
@@ -2882,31 +2900,31 @@ Local Symbols
 <LI><a href="#[8a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;write_frame_header
 <LI><a href="#[8c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;write_file_trailer
 <LI><a href="#[89]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;write_file_header
-<LI><a href="#[16b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;emit_sos
-<LI><a href="#[16a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;emit_sof
-<LI><a href="#[164]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;emit_jfif_app0
-<LI><a href="#[162]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;emit_dqt
-<LI><a href="#[161]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;emit_dht
-<LI><a href="#[160]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;emit_dac
-<LI><a href="#[15a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;emit_adobe_app14
+<LI><a href="#[170]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;emit_sos
+<LI><a href="#[16f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;emit_sof
+<LI><a href="#[169]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;emit_jfif_app0
+<LI><a href="#[167]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;emit_dqt
+<LI><a href="#[166]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;emit_dht
+<LI><a href="#[165]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;emit_dac
+<LI><a href="#[15f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;emit_adobe_app14
 </UL>
 
-<P><STRONG><a name="[16a]"></a>emit_sof</STRONG> (Thumb, 140 bytes, Stack size 16 bytes, jcmarker.o(i.emit_sof))
+<P><STRONG><a name="[16f]"></a>emit_sof</STRONG> (Thumb, 140 bytes, Stack size 16 bytes, jcmarker.o(i.emit_sof))
 <BR><BR>[Stack]<UL><LI>Max Depth = 40<LI>Call Chain = emit_sof &rArr; emit_marker &rArr; emit_byte
 </UL>
-<BR>[Calls]<UL><LI><a href="#[15b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;emit_marker
-<LI><a href="#[157]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;emit_byte
-<LI><a href="#[156]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;emit_2bytes
+<BR>[Calls]<UL><LI><a href="#[160]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;emit_marker
+<LI><a href="#[15c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;emit_byte
+<LI><a href="#[15b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;emit_2bytes
 </UL>
 <BR>[Called By]<UL><LI><a href="#[8a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;write_frame_header
 </UL>
 
-<P><STRONG><a name="[16b]"></a>emit_sos</STRONG> (Thumb, 142 bytes, Stack size 16 bytes, jcmarker.o(i.emit_sos))
+<P><STRONG><a name="[170]"></a>emit_sos</STRONG> (Thumb, 142 bytes, Stack size 16 bytes, jcmarker.o(i.emit_sos))
 <BR><BR>[Stack]<UL><LI>Max Depth = 40<LI>Call Chain = emit_sos &rArr; emit_marker &rArr; emit_byte
 </UL>
-<BR>[Calls]<UL><LI><a href="#[15b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;emit_marker
-<LI><a href="#[157]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;emit_byte
-<LI><a href="#[156]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;emit_2bytes
+<BR>[Calls]<UL><LI><a href="#[160]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;emit_marker
+<LI><a href="#[15c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;emit_byte
+<LI><a href="#[15b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;emit_2bytes
 </UL>
 <BR>[Called By]<UL><LI><a href="#[8b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;write_scan_header
 </UL>
@@ -2914,71 +2932,71 @@ Local Symbols
 <P><STRONG><a name="[89]"></a>write_file_header</STRONG> (Thumb, 50 bytes, Stack size 16 bytes, jcmarker.o(i.write_file_header))
 <BR><BR>[Stack]<UL><LI>Max Depth = 48<LI>Call Chain = write_file_header &rArr; emit_jfif_app0 &rArr; emit_marker &rArr; emit_byte
 </UL>
-<BR>[Calls]<UL><LI><a href="#[15b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;emit_marker
-<LI><a href="#[164]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;emit_jfif_app0
-<LI><a href="#[15a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;emit_adobe_app14
+<BR>[Calls]<UL><LI><a href="#[160]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;emit_marker
+<LI><a href="#[169]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;emit_jfif_app0
+<LI><a href="#[15f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;emit_adobe_app14
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> jcmarker.o(i.jinit_marker_writer)
 </UL>
 <P><STRONG><a name="[8c]"></a>write_file_trailer</STRONG> (Thumb, 6 bytes, Stack size 0 bytes, jcmarker.o(i.write_file_trailer))
 <BR><BR>[Stack]<UL><LI>Max Depth = 24<LI>Call Chain = write_file_trailer &rArr; emit_marker &rArr; emit_byte
 </UL>
-<BR>[Calls]<UL><LI><a href="#[15b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;emit_marker
+<BR>[Calls]<UL><LI><a href="#[160]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;emit_marker
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> jcmarker.o(i.jinit_marker_writer)
 </UL>
 <P><STRONG><a name="[8a]"></a>write_frame_header</STRONG> (Thumb, 236 bytes, Stack size 24 bytes, jcmarker.o(i.write_frame_header))
 <BR><BR>[Stack]<UL><LI>Max Depth = 72<LI>Call Chain = write_frame_header &rArr; emit_dqt &rArr; emit_marker &rArr; emit_byte
 </UL>
-<BR>[Calls]<UL><LI><a href="#[16a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;emit_sof
-<LI><a href="#[15b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;emit_marker
-<LI><a href="#[162]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;emit_dqt
-<LI><a href="#[157]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;emit_byte
-<LI><a href="#[156]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;emit_2bytes
+<BR>[Calls]<UL><LI><a href="#[16f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;emit_sof
+<LI><a href="#[160]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;emit_marker
+<LI><a href="#[167]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;emit_dqt
+<LI><a href="#[15c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;emit_byte
+<LI><a href="#[15b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;emit_2bytes
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> jcmarker.o(i.jinit_marker_writer)
 </UL>
 <P><STRONG><a name="[8f]"></a>write_marker_byte</STRONG> (Thumb, 4 bytes, Stack size 0 bytes, jcmarker.o(i.write_marker_byte))
 <BR><BR>[Stack]<UL><LI>Max Depth = 8<LI>Call Chain = write_marker_byte &rArr; emit_byte
 </UL>
-<BR>[Calls]<UL><LI><a href="#[157]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;emit_byte
+<BR>[Calls]<UL><LI><a href="#[15c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;emit_byte
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> jcmarker.o(i.jinit_marker_writer)
 </UL>
 <P><STRONG><a name="[8e]"></a>write_marker_header</STRONG> (Thumb, 50 bytes, Stack size 16 bytes, jcmarker.o(i.write_marker_header))
 <BR><BR>[Stack]<UL><LI>Max Depth = 40<LI>Call Chain = write_marker_header &rArr; emit_marker &rArr; emit_byte
 </UL>
-<BR>[Calls]<UL><LI><a href="#[15b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;emit_marker
-<LI><a href="#[156]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;emit_2bytes
+<BR>[Calls]<UL><LI><a href="#[160]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;emit_marker
+<LI><a href="#[15b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;emit_2bytes
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> jcmarker.o(i.jinit_marker_writer)
 </UL>
 <P><STRONG><a name="[8b]"></a>write_scan_header</STRONG> (Thumb, 136 bytes, Stack size 24 bytes, jcmarker.o(i.write_scan_header))
 <BR><BR>[Stack]<UL><LI>Max Depth = 104<LI>Call Chain = write_scan_header &rArr; emit_dac &rArr; emit_marker &rArr; emit_byte
 </UL>
-<BR>[Calls]<UL><LI><a href="#[16b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;emit_sos
-<LI><a href="#[15b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;emit_marker
-<LI><a href="#[161]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;emit_dht
-<LI><a href="#[160]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;emit_dac
-<LI><a href="#[156]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;emit_2bytes
+<BR>[Calls]<UL><LI><a href="#[170]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;emit_sos
+<LI><a href="#[160]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;emit_marker
+<LI><a href="#[166]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;emit_dht
+<LI><a href="#[165]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;emit_dac
+<LI><a href="#[15b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;emit_2bytes
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> jcmarker.o(i.jinit_marker_writer)
 </UL>
 <P><STRONG><a name="[8d]"></a>write_tables_only</STRONG> (Thumb, 96 bytes, Stack size 16 bytes, jcmarker.o(i.write_tables_only))
 <BR><BR>[Stack]<UL><LI>Max Depth = 64<LI>Call Chain = write_tables_only &rArr; emit_dqt &rArr; emit_marker &rArr; emit_byte
 </UL>
-<BR>[Calls]<UL><LI><a href="#[15b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;emit_marker
-<LI><a href="#[162]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;emit_dqt
-<LI><a href="#[161]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;emit_dht
+<BR>[Calls]<UL><LI><a href="#[160]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;emit_marker
+<LI><a href="#[167]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;emit_dqt
+<LI><a href="#[166]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;emit_dht
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> jcmarker.o(i.jinit_marker_writer)
 </UL>
 <P><STRONG><a name="[9c]"></a>empty_mem_output_buffer</STRONG> (Thumb, 80 bytes, Stack size 24 bytes, jdatadst.o(i.empty_mem_output_buffer))
 <BR><BR>[Stack]<UL><LI>Max Depth = 44<LI>Call Chain = empty_mem_output_buffer &rArr; malloc
 </UL>
-<BR>[Calls]<UL><LI><a href="#[135]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_memcpy
-<LI><a href="#[16c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;malloc
-<LI><a href="#[16d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;free
+<BR>[Calls]<UL><LI><a href="#[171]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;malloc
+<LI><a href="#[172]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;free
+<LI><a href="#[135]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_memcpy
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> jdatadst.o(i.jpeg_mem_dest)
 </UL>
@@ -2996,14 +3014,14 @@ Local Symbols
 <P><STRONG><a name="[9e]"></a>error_exit</STRONG> (Thumb, 22 bytes, Stack size 8 bytes, jerror.o(i.error_exit))
 <BR><BR>[Stack]<UL><LI>Max Depth = 16<LI>Call Chain = error_exit &rArr; jpeg_destroy
 </UL>
-<BR>[Calls]<UL><LI><a href="#[170]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;jpeg_destroy
+<BR>[Calls]<UL><LI><a href="#[175]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;jpeg_destroy
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> jerror.o(i.jpeg_std_error)
 </UL>
 <P><STRONG><a name="[a1]"></a>format_message</STRONG> (Thumb, 136 bytes, Stack size 40 bytes, jerror.o(i.format_message))
 <BR><BR>[Stack]<UL><LI>Max Depth = 64<LI>Call Chain = format_message &rArr; __2sprintf
 </UL>
-<BR>[Calls]<UL><LI><a href="#[17e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__2sprintf
+<BR>[Calls]<UL><LI><a href="#[181]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__2sprintf
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> jerror.o(i.jpeg_std_error)
 </UL>
@@ -3090,8 +3108,8 @@ Local Symbols
 <P><STRONG><a name="[99]"></a>free_pool</STRONG> (Thumb, 198 bytes, Stack size 32 bytes, jmemmgr.o(i.free_pool))
 <BR><BR>[Stack]<UL><LI>Max Depth = 52<LI>Call Chain = free_pool &rArr; jpeg_free_small &rArr; vPortFree &rArr; prvInsertBlockIntoFreeList
 </UL>
-<BR>[Calls]<UL><LI><a href="#[180]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;jpeg_free_small
-<LI><a href="#[17f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;jpeg_free_large
+<BR>[Calls]<UL><LI><a href="#[183]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;jpeg_free_small
+<LI><a href="#[182]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;jpeg_free_large
 </UL>
 <BR>[Called By]<UL><LI><a href="#[9a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;self_destruct
 </UL>
@@ -3105,8 +3123,8 @@ Local Symbols
 <P><STRONG><a name="[96]"></a>realize_virt_arrays</STRONG> (Thumb, 278 bytes, Stack size 32 bytes, jmemmgr.o(i.realize_virt_arrays))
 <BR><BR>[Stack]<UL><LI>Max Depth = 132<LI>Call Chain = realize_virt_arrays &rArr; alloc_sarray &rArr; alloc_small &rArr; jpeg_get_small &rArr; pvPortMalloc &rArr; prvInsertBlockIntoFreeList
 </UL>
-<BR>[Calls]<UL><LI><a href="#[1ac]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;jpeg_open_backing_store
-<LI><a href="#[1ab]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;jpeg_mem_available
+<BR>[Calls]<UL><LI><a href="#[1ae]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;jpeg_open_backing_store
+<LI><a href="#[1ad]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;jpeg_mem_available
 <LI><a href="#[92]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;alloc_sarray
 <LI><a href="#[93]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;alloc_barray
 </UL>
@@ -3129,16 +3147,16 @@ Local Symbols
 <P><STRONG><a name="[9a]"></a>self_destruct</STRONG> (Thumb, 42 bytes, Stack size 16 bytes, jmemmgr.o(i.self_destruct))
 <BR><BR>[Stack]<UL><LI>Max Depth = 68<LI>Call Chain = self_destruct &rArr; free_pool &rArr; jpeg_free_small &rArr; vPortFree &rArr; prvInsertBlockIntoFreeList
 </UL>
-<BR>[Calls]<UL><LI><a href="#[194]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;jpeg_mem_term
-<LI><a href="#[180]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;jpeg_free_small
+<BR>[Calls]<UL><LI><a href="#[197]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;jpeg_mem_term
+<LI><a href="#[183]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;jpeg_free_small
 <LI><a href="#[99]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;free_pool
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> jmemmgr.o(i.jinit_memory_mgr)
 </UL>
 <P><STRONG><a name="[130]"></a>_printf_core</STRONG> (Thumb, 996 bytes, Stack size 104 bytes, printf8.o(i._printf_core), UNUSED)
-<BR><BR>[Calls]<UL><LI><a href="#[db]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_uldivmod
-<LI><a href="#[137]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_printf_pre_padding
+<BR><BR>[Calls]<UL><LI><a href="#[137]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_printf_pre_padding
 <LI><a href="#[138]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_printf_post_padding
+<LI><a href="#[db]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_uldivmod
 </UL>
 <BR>[Called By]<UL><LI><a href="#[131]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__0sprintf$8
 <LI><a href="#[12f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__0printf$8
